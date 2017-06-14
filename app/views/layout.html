@@ -1,0 +1,31 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block proposition_header %}
+  {% include "includes/propositional_navigation.html" %}
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block after_header %}
+  {% include "includes/googletag.html" %}
+{% endblock %}
+
+{% block content_top %}
+  {% include "includes/phase_banner_beta.html" %}
+  <a href="javascript: window.history.go(-1)" class="link-back">Back</a>
+{% endblock %}
+
+{% block footer_top %}
+  {% include "includes/footer_content.html" %}
+{% endblock %}
+
+{% block body_end %}
+{% include "includes/scripts.html" %}
+
+{% endblock %}

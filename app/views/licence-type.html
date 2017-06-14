@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% set main_question = "Which licence number do you have?" %}
+
+{% block page_title %}
+  {{ main_question }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">{{ main_question }}</h1>
+      <form method="post" action="{{form_action}}">
+          <fieldset data-required data-error="Enter your rod licence number">
+            <legend class="visuallyhidden">{{ main_question }}</legend>
+              <div class="form-group">
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="licence-type" value="A 9-digit licence number">
+                  <label for="radio-1" class="heading-small">A 9-digit licence number</label>
+                  <br>
+                  For example, 345 612 895
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-2" type="radio" name="licence-type" value="A 21-digit licence number">
+                  <label for="radio-2" class="heading-small">A 21-digit licence number</label>
+                  <br>
+                  For example, 00010418-3WC3JDS-B7A718
+                </div>
+              </div>
+          </fieldset>
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
