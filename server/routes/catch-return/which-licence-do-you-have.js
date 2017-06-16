@@ -1,17 +1,17 @@
 const handlers = {
   get: function (request, reply) {
     return reply.view('which-licence-do-you-have', {
-      pageTitle: 'Enter your licence details',
-      errorMessage: 'Tell us which licence number you have',
+      pageTitle: 'How long is your licence number?',
+      errorMessage: 'Tell us how long your licence number is',
       items: {
         one: {
-          text: 'A 9-digit licence number',
+          text: 'I have a 9-digit licence number',
           name: 'licenceNumber',
           id: 'Old',
-          subText: 'For example, 345 612 895',
+          subText: 'For example, 345612895',
         },
         two: {
-          text: 'A 21-digit licence number',
+          text: 'My licence number is longer than 9 digits',
           name: 'licenceNumber',
           id: 'New',
           subText: 'For example, 00010418-3WC3JDS-B7A718',

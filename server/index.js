@@ -7,7 +7,7 @@ const options = {
 
 const users = {
   iwtf: {
-    username: 'iwtf',
+    username: 'catch',
     password: 'prototype',
     name: 'Mr Fish',
     id: '2133d32b'
