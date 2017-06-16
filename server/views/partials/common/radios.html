@@ -1,0 +1,21 @@
+{{#each items}}
+  <label for="{{name}}" class="block-label {{#if disabled}}disabled{{/if}}" {{#if selectedText}}data-target="{{name}}_text"{{/if}}>
+    <input id="{{name}}" type="radio" 
+      name="{{../name}}" value="{{value}}"
+      {{#if checked}}checked{{/if}}
+      {{#if disabled}}disabled{{/if}}>
+    {{#if ../hasAnySubText}}
+      <span class="heading-small">{{text}}</span>
+    {{else}}
+      {{text}}
+    {{/if}}
+    {{#if subText}}
+      <br>{{subText}}
+    {{/if}}
+  </label>
+  {{#if selectedText}}
+    <div class="panel panel-border-narrow js-hidden" id="{{name}}_text">
+      <p>{{selectedText}}</p>
+    </div>
+  {{/if}}
+{{/each}}
