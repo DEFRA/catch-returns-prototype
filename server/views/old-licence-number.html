@@ -1,7 +1,9 @@
 <div class="grid-row">
     <div class="column-two-thirds reducemargin">
         {{> common/back}}
+        {{> common/errors}}
         <h1 class="heading-large">{{pageTitle}}</h1>
+        <p>It will take at least 48 hours for newly purchased licence numbers to appear online before a catch return can be submitted.</p>
         <details class="progressive-disclosure-margin" role="group">
                 <summary role="button" aria-controls="details-content-0" aria-expanded="true"><span class="summary">I don't know my licence number</span></summary>
                 <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="false">
@@ -10,7 +12,7 @@
                     </p>
                 </div>
             </details>
-        <p>It will take at least 48 hours for newly purchased licence numbers to appear online before a catch return can be submitted.</p>
+            <br>
         <form method="post" autocomplete="off" novalidate>
             <fieldset data-required data-error="{{errorMessage}}">
                 <div class="form-group">

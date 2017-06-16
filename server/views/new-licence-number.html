@@ -1,6 +1,7 @@
 <div class="grid-row">
     <div class="column-two-thirds reducemargin">
         {{> common/back}}
+        {{> common/errors}}
         <h1 class="heading-large">{{pageTitle}}</h1>
         <p>It will take at least 48 hours for newly purchased licence numbers to appear online before a catch return can be submitted.</p>
         <details class="progressive-disclosure-margin" role="group">
@@ -13,6 +14,7 @@
                 </p>
             </div>
         </details>  
+        <br>
         <form method="post" autocomplete="off" novalidate>
             <fieldset data-required data-error="{{errorMessage}}">
                 <div class="form-group">
