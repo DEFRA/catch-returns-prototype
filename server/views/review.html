@@ -1,116 +1,110 @@
 <div class="grid-row">
-    <div class="column-full reducemargin">
-      {{> common/back}}
-      {{> common/errors}}
-      <h1 class="heading-large">{{pageTitle}}</h1> 
+  <div class="column-full reducemargin">
+    {{> common/back}} {{> common/errors}}
+    <h1 class="heading-large">{{pageTitle}}</h1>
 
-      <h3 class="heading-small">Rivers fished</h3>
+    <h3 class="heading-small">Rivers fished</h3>
 
+ß
 
-	
-      <table class="riversFishedReview" style="width: 90%">
-					<thead>
-						<tr>
-							<th>River name</th>
-							<th>Nearest town</th>
-							<th>Number of days fished before 16 June</th>
-							<th>Number of days fished after 16 June</th>
-							<th>Edit</th>
-							<th>Delete</th>
-						</tr>
-					</thead>
-					<tbody>
-						{{#each rivers}}
-							<tr>
-								<td>{{riverName}}</td>
-								<td>{{riverTown}}</td>
-								<td>{{riverDaysBeforeJune}}</td>
-								<td>{{riverDaysAfterJune}}</td>
-								<td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
-								<td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
-						</tr>
-						{{/each}}
-					
-						
-					</tbody>
-				</table>
-				<br>
-				<p>
-					<a hreft="add-river" class="button">Add another river</a>
-				</p>
-      <h3 class="heading-small">Small sea trout</h3>
-      <table class="smallFishReview" style="width: 90%">
-					<thead>
-						<tr>
-							<th>River</th>
-							<th>Month</th>
-							<th>Number of fish caught</th>
-							<th>Number of fish released</th>
-							<th>Edit</th>
-						</tr>
-					</thead>
-						<tbody>
-						{{#each rivers}}
-							{{#each SmallSeaTrout}}
-								<tr>
-									<td>{{river}}</td>
-									<td>{{month}}</td>
-									<td>{{NumberOfFishCaugh}}</td>
-									<td>{{NumberOfFishReleased}}</td>
-									<td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
-							</tr>
-						{{/each}}
-					{{/each}}
-					</tbody>
-				</table>
-				<br>
-				<p>
-					<a hreft="add-small-sea-trout" class="button">Add small sea trout</a>
-				</p>
-      <h3 class="heading-small">Salmon and large sea trout</h3>
-        <table class="largeFishReview" style="width: 90%">
-					<thead>
-						<tr>
-							<th>River</th>
-							<th>Date of capture</th>
-							<th>Type of fish</th>
-							<th>Weight</th>
-							<th>Released</th>
-							<th>Edit</th>
-							<th>Delete</th>
-						</tr>
-					</thead>
-						<tbody>
-						{{#each rivers}}
-							{{#each SalmonAndLargeSeaTrout}}
-								<tr>
-									<td>{{river}}</td>
-									<td>{{date}}</td>
-									<td>{{typeOfFish}}</td>
-									<td>{{weight}}</td>
-									<td>{{NumberOfFishReleased}}</td>
-									<td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
-									<td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
-							</tr>
-						{{/each}}
-					{{/each}}
-					</tbody>
-				</table>
-				<br>
-				<p>
-					<a hreft="add-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout</a>
-       </p>
+    <table class="riversFishedReview" style="width: 90%">
+      <thead>
+        <tr>
+          <th>River name</th>
+          <th>Nearest town</th>
+          <th>Number of days fished before 16 June</th>
+          <th>Number of days fished after 16 June</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each rivers}}
+        <tr>
+          <td>{{riverName}}</td>
+          <td>{{riverTown}}</td>
+          <td>{{riverDaysBeforeJune}}</td>
+          <td>{{riverDaysAfterJune}}</td>
+          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
+          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
+        </tr>
+        {{/each}}
 
 
-      <p class="group">If you expect to fish again this season and your current licence is still valid please click the 'Exit and continue catch return later' button to return at a later date. You will then be able to update your return with further catches. </p>
-      <p class="group">Otherwise, if you have finished fishing for the season on this licence, please click the 'Submit catch return' button to complete your catch return. Once submitted you will not be able to add or edit your return.</p>
-      <p class="group">Your saved information may be automatically submitted at the end of the fishing season. </p>
-     <p>
-        <a href="thank-you" onclick="confirm('Confirm that you hve finished fishing for the season on this licence');" class="button">Submit catch return</a>
-        <a href="/" class="button button-secondary">Exit and continue catch return later</a>
-      </p>
-    </div>
+      </tbody>
+    </table>
+    <br>
+    <p>
+      <a hreft="add-river" class="button">Add another river</a>
+    </p>
+    <h3 class="heading-small">Small sea trout</h3>
+    <table class="smallFishReview" style="width: 90%">
+      <thead>
+        <tr>
+          <th>River</th>
+          <th>Month</th>
+          <th>Number of fish caught</th>
+          <th>Number of fish released</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each rivers}} {{#each SmallSeaTrout}}
+        <tr>
+          <td>{{river}}</td>
+          <td>{{month}}</td>
+          <td>{{NumberOfFishCaugh}}</td>
+          <td>{{NumberOfFishReleased}}</td>
+          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
+        </tr>
+        {{/each}} {{/each}}
+      </tbody>
+    </table>
+    <br>
+    <p>
+      <a hreft="add-small-sea-trout" class="button">Add small sea trout</a>
+    </p>
+    <h3 class="heading-small">Salmon and large sea trout</h3>
+    <table class="largeFishReview" style="width: 90%">
+      <thead>
+        <tr>
+          <th>River</th>
+          <th>Date of capture</th>
+          <th>Type of fish</th>
+          <th>Weight</th>
+          <th>Released</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each rivers}} {{#each SalmonAndLargeSeaTrout}}
+        <tr>
+          <td>{{river}}</td>
+          <td>{{date}}</td>
+          <td>{{typeOfFish}}</td>
+          <td>{{weight}}</td>
+          <td>{{NumberOfFishReleased}}</td>
+          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
+          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
+        </tr>
+        {{/each}} {{/each}}
+      </tbody>
+    </table>
+    <br>
+    <p>
+      <a hreft="add-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout</a>
+    </p>
+
+
+    <p class="group">If you expect to fish again this season and your current licence is still valid please click the 'Exit and continue catch
+      return later' button to return at a later date. You will then be able to update your return with further catches. </p>
+    <p class="group">Otherwise, if you have finished fishing for the season on this licence, please click the 'Submit catch return' button
+      to complete your catch return. Once submitted you will not be able to add or edit your return.</p>
+    <p class="group">Your saved information may be automatically submitted at the end of the fishing season. </p>
+    <p>
+      <a href="thank-you" onclick="confirm('Confirm that you hve finished fishing for the season on this licence');" class="button">Submit catch return</a>
+      <a href="/" class="button button-secondary">Exit and continue catch return later</a>
+    </p>
+  </div>
 </div>
-
-
-			

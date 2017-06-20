@@ -13,7 +13,7 @@ const handlers = {
     request.session.nearestTown = request.payload.nearestTown
     request.session.daysFishedBefore = request.payload.daysFishedBefore
     request.session.daysFishedAfter = request.payload.daysFishedAfter
-    
+
     return reply.redirect('review')
   }
 }

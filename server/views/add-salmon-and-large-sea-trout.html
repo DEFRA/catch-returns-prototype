@@ -1,44 +1,43 @@
 <div class="grid-row">
-    <div class="column-full reducemargin">
-        {{> common/back}}
-        {{> common/errors}}
+  <div class="column-full reducemargin">
+    {{> common/back}} {{> common/errors}}
 
 
 
-         <h2 class="heading-large">Select river</h2>
-        <form method="post" autocomplete="off" novalidate>
-            <fieldset class="inline" data-required data-error="{{errorMessage}}">
-                <legend class="visually-hidden">Select river</legend>
-                <div class="form-group">
-                  <label class="form-label" for="select-box">River name</label>
-                    <select class="form-control" id="riverName" name="riverName">
+    <h2 class="heading-large">Select river</h2>
+    <form method="post" autocomplete="off" novalidate>
+      <fieldset class="inline" data-required data-error="{{errorMessage}}">
+        <legend class="visually-hidden">Select river</legend>
+        <div class="form-group">
+          <label class="form-label" for="select-box">River name</label>
+          <select class="form-control" id="riverName" name="riverName">
                       <option value="???">Add all rivers fished in</option>
                       <option value="???">Add all rivers fished in</option>
                       <option value="???">Add all rivers fished in</option>
                     </select>
-                    </div>
-                  </fieldset>
-            <button type="submit" class="button">Next</button>
-            <a href="review" class="button button-secondary">Cancel</a>
-        </form>
+        </div>
+      </fieldset>
+      <button type="submit" class="button">Next</button>
+      <a href="review" class="button button-secondary">Cancel</a>
+    </form>
 
 
 
 
 
-        <h1 class="heading-large">Add salmon and large sea trout (over 1lb) for river {{riverName}}</h1> 
+    <h1 class="heading-large">Add salmon and large sea trout (over 1lb) for river {{riverName}}</h1>
 
-        <form method="post" autocomplete="off" novalidate>
-          
-           <fieldset data-required data-error="{{errorMessage}}">
-             <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river {{riverName}}</legend>
-              <div class="form-group">
-                <h3 class="heading-small">Date of catch</h3>
-               
-                
-                <div class="form-group form-group-day">
-                  <label class="form-label day" for="catch-day">Day</label>
-                  <select class="form-control" id="day" aria-required="true" name="dailyIndividualCatchEffort.dayOfCapture">
+    <form method="post" autocomplete="off" novalidate>
+
+      <fieldset data-required data-error="{{errorMessage}}">
+        <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river {{riverName}}</legend>
+        <div class="form-group">
+          <h3 class="heading-small">Date of catch</h3>
+
+
+          <div class="form-group form-group-day">
+            <label class="form-label day" for="catch-day">Day</label>
+            <select class="form-control" id="day" aria-required="true" name="dailyIndividualCatchEffort.dayOfCapture">
                     <option value="-1" selected="selected">Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -49,10 +48,10 @@
                     <option value="7">7</option>
                     <option value="8">8</option>
                   </select>
-                </div>
-                <div class="form-group form-group-month">
-                  <label class="form-label month" for="catch-month">Month</label>
-                  <select class="form-control" id="month" type="text" aria-required="true" name="dailyIndividualCatchEffort.monthOfCapture">
+          </div>
+          <div class="form-group form-group-month">
+            <label class="form-label month" for="catch-month">Month</label>
+            <select class="form-control" id="month" type="text" aria-required="true" name="dailyIndividualCatchEffort.monthOfCapture">
                     <option value="1" selected="selected">January</option>
                     <option value="2" selected="selected">February</option>
                     <option value="3" selected="selected">March</option>
@@ -66,84 +65,81 @@
                     <option value="11" selected="selected">November</option>
                     <option value="12" selected="selected">December</option>
                   </select>
-                </div>
-                <div class="form-group form-group-year">
-                  <label class="form-label year" for="catch-year">Year</label>
-                    <select class="form-control" id="year" aria-required="true" name="dailyIndividualCatchEffort.yearOfCapture">
+          </div>
+          <div class="form-group form-group-year">
+            <label class="form-label year" for="catch-year">Year</label>
+            <select class="form-control" id="year" aria-required="true" name="dailyIndividualCatchEffort.yearOfCapture">
                       <option value="2016" selected="selected">2016</option>	
                       <option value="2017" selected="selected">2017</option>						
                     </select>
-                </div>
-                  
-                
-               
+          </div>
 
-              </div>
-            </fieldset>
-          
-          <fieldset data-required data-error="{{errorMessage}}">
-            <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river</legend>
-              <div class="form-group">
-                <h3 class="heading-small">Type of catch</h3>
-                <label for="salmonAndGrilse" class="block-label selection-button-radio">salmonAndGrilse
+
+
+
+        </div>
+      </fieldset>
+
+      <fieldset data-required data-error="{{errorMessage}}">
+        <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river</legend>
+        <div class="form-group">
+          <h3 class="heading-small">Type of catch</h3>
+          <label for="salmonAndGrilse" class="block-label selection-button-radio">salmonAndGrilse
                   <input id="salmonAndGrilse" type="radio" name="typeOfFish" value="salmonAndGrilse">
                 </label>
-                <label for="SeaTrout" class="block-label selection-button-radio">SeaTrout
+          <label for="SeaTrout" class="block-label selection-button-radio">SeaTrout
                   <input id="SeaTrout" type="radio" name="typeOfFish" value="SeaTrout">
                 </label>
-              </div>
-            </fieldset>
+        </div>
+      </fieldset>
 
-            <fieldset data-required data-error="{{errorMessage}}">
-              <div class="form-group">
-                <h3 class="heading-small">Weight of catch</h3>
+      <fieldset data-required data-error="{{errorMessage}}">
+        <div class="form-group">
+          <h3 class="heading-small">Weight of catch</h3>
 
-                <div class="form-group form-group-day">
-                  <label class="form-label day" for="catch-lb">lb</label>
-                  <input class="form-control" id="lb" name="lb" type="number">
-                </div>
-                <div class="form-group form-group-month">
-                  <label class="form-label month" for="catch-oz">oz</label>
-                  <input class="form-control" id="oz" name="oz" type="number">
-                </div>
-                <!--<button class="button button-secondary">Convert to metric</button>-->
-              </div>
-            </fieldset>
+          <div class="form-group form-group-day">
+            <label class="form-label day" for="catch-lb">lb</label>
+            <input class="form-control" id="lb" name="lb" type="number">
+          </div>
+          <div class="form-group form-group-month">
+            <label class="form-label month" for="catch-oz">oz</label>
+            <input class="form-control" id="oz" name="oz" type="number">
+          </div>
+          <!--<button class="button button-secondary">Convert to metric</button>-->
+        </div>
+      </fieldset>
 
 
-            <fieldset data-required data-error="{{errorMessage}}">
-              <div class="form-group">
-                <h3 class="heading-small">Method of capture</h3>
-                <label for="methodFly" class="block-label selection-button-radio">Fly
+      <fieldset data-required data-error="{{errorMessage}}">
+        <div class="form-group">
+          <h3 class="heading-small">Method of capture</h3>
+          <label for="methodFly" class="block-label selection-button-radio">Fly
                   <input id="methodFly" type="radio" name="MethodOfCapture" value="methodFly">
                 </label>
-                <label for="methodSpinner" class="block-label selection-button-radio">Spinner
+          <label for="methodSpinner" class="block-label selection-button-radio">Spinner
                   <input id="methodSpinner" type="radio" name="MethodOfCapture" value="methodSpinner">
                 </label>
-                <label for="methodBait" class="block-label selection-button-radio">Bait
+          <label for="methodBait" class="block-label selection-button-radio">Bait
                   <input id="methodBait" type="radio" name="MethodOfCapture" value="methodBait">
                 </label>
-              </div>
-            </fieldset>
-            <fieldset data-required data-error="{{errorMessage}}">
-              <div class="form-group">
-                <h3 class="heading-small">Released</h3>
-                <label for="Yes" class="block-label selection-button-radio">Yes
+        </div>
+      </fieldset>
+      <fieldset data-required data-error="{{errorMessage}}">
+        <div class="form-group">
+          <h3 class="heading-small">Released</h3>
+          <label for="Yes" class="block-label selection-button-radio">Yes
                   <input id="Yes" type="radio" name="released" value="Yes">
                 </label>
-                <label for="No" class="block-label selection-button-radio">No
+          <label for="No" class="block-label selection-button-radio">No
                   <input id="No" type="radio" name="released" value="No">
                 </label>
-              </div>
-            </fieldset>
-          </form>
+        </div>
+      </fieldset>
+    </form>
 
-       
-      <button type="submit" class="button">Save and add another</button>
-      <button type="submit" class="button">Save and continue</button>
-      <a href="review" class="button button-secondary">Cancel</a>
-    </div>
+
+    <button type="submit" class="button">Save and add another</button>
+    <button type="submit" class="button">Save and continue</button>
+    <a href="review" class="button button-secondary">Cancel</a>
+  </div>
 </div>
-
-
-            

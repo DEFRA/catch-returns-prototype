@@ -1,14 +1,13 @@
 <div class="grid-row">
-    <div class="column-full reducemargin">
-        {{> common/back}}
-        {{> common/errors}}
-        <h1 class="heading-large">{{pageTitle}}</h1> 
+  <div class="column-full reducemargin">
+    {{> common/back}} {{> common/errors}}
+    <h1 class="heading-large">{{pageTitle}}</h1>
 
-        <form method="post" autocomplete="off" novalidate>
-            <fieldset class="inline" data-required data-error="{{errorMessage}}">
-                <div class="form-group">
-                  <label class="form-label" for="select-box">River name</label>
-                    <select class="form-control" id="riverName" name="riverName">
+    <form method="post" autocomplete="off" novalidate>
+      <fieldset class="inline" data-required data-error="{{errorMessage}}">
+        <div class="form-group">
+          <label class="form-label" for="select-box">River name</label>
+          <select class="form-control" id="riverName" name="riverName">
                       <option value="Aber" selected="selected">Aber</option>
                       <option value="Adur">Adur</option>
                       <option value="Aeron">Aeron</option>
@@ -236,37 +235,34 @@
                       <option value="Ystrad">Ystrad</option>
                       <option value="Ystwyth">Ystwyth</option>
                     </select>
-                    </div>
-                  </fieldset>
-                  <fieldset class="inline" data-required data-error="{{errorMessageTwo}}">
-                    <div class="form-group">
-                      <label class="form-label" for="nearestTown">Nearest town</label>
-                      <input class="form-control" id="nearestTown" name="nearestTown" type="text">
-                    </div>
-                  </fieldset>
-                  <fieldset class="inline" data-required data-error="{{errorMessageThree}}">
-                    <div class="form-group">
-                      <label class="form-label" for="daysFishedBefore">How many days (in digits) did you fish before 16 June?</label>
-                      <input class="form-control form-group-number" id="daysFishedBefore" name="daysFishedBefore" type="text">
-                    </div>
-                  </fieldset>
-                  <fieldset class="inline" data-required data-error="{{errorMessageFour}}">
-                    <div class="form-group">
-                      <label class="form-label" for="daysFishedAfter">How many days (in digits) did you fish after 16 June?</label>
-                      <input class="form-control form-group-number" id="daysFishedAfter" name="daysFishedAfter" type="text">
-                    </div>
-                </fieldset>
-            <button type="submit" class="button">Save and continue</button>
-            <button type="submit" class="button">Save and continue</button>
-            <a href="/add-small-sea-trout" class="button">Add small sea trout</a>
-            <a href="/add-salmon-and-sea-trout" class="button">Add salmon and large sea trout (over 1lb)</a>
-            <button type="submit" class="button">Save and continue</button>
-        </form>
-      <br>
-      <p class="group">Small sea trout are fish 1lb or less in weight.</p>
-      
-    </div>
+        </div>
+      </fieldset>
+      <fieldset class="inline" data-required data-error="{{errorMessageTwo}}">
+        <div class="form-group">
+          <label class="form-label" for="nearestTown">Nearest town</label>
+          <input class="form-control" id="nearestTown" name="nearestTown" type="text">
+        </div>
+      </fieldset>
+      <fieldset class="inline" data-required data-error="{{errorMessageThree}}">
+        <div class="form-group">
+          <label class="form-label" for="daysFishedBefore">How many days (in digits) did you fish before 16 June?</label>
+          <input class="form-control form-group-number" id="daysFishedBefore" name="daysFishedBefore" type="text">
+        </div>
+      </fieldset>
+      <fieldset class="inline" data-required data-error="{{errorMessageFour}}">
+        <div class="form-group">
+          <label class="form-label" for="daysFishedAfter">How many days (in digits) did you fish after 16 June?</label>
+          <input class="form-control form-group-number" id="daysFishedAfter" name="daysFishedAfter" type="text">
+        </div>
+      </fieldset>
+      <button type="submit" class="button">Save and continue</button>
+      <button type="submit" class="button">Save and continue</button>
+      <a href="/add-small-sea-trout" class="button">Add small sea trout</a>
+      <a href="/add-salmon-and-sea-trout" class="button">Add salmon and large sea trout (over 1lb)</a>
+      <button type="submit" class="button">Save and continue</button>
+    </form>
+    <br>
+    <p class="group">Small sea trout are fish 1lb or less in weight.</p>
+
+  </div>
 </div>
-
-
-			

@@ -1,28 +1,26 @@
 <div class="grid-row">
-    <div class="column-two-thirds reducemargin">
-        {{> common/back}}
-        {{> common/errors}}
-        <h1 class="heading-large">{{pageTitle}}</h1> 
-        <form method="post" autocomplete="off" novalidate>
-            <fieldset class="inline" data-required data-error="{{errorMessage}}">
-                <legend class="visually-hidden">{{pageTitle}}</legend>
-                <div class="form-group">
-                    {{#each items}}
-                    <label for="{{id}}" class="block-label selection-button-radio" {{#if selectedText}}data-target="{{name}}_text" {{/if}}>
-                        <input id="{{id}}" type="radio" name="{{name}}" value="{{id}}" {{#if checked}}checked{{/if}}>
-                        <span class="heading-small"> {{text}}</span>
-                        {{#if subText}}
-                            <br>{{subText}}
-                        {{/if}}
-                    </label> {{#if selectedText}}
-                    <div class="panel panel-border-narrow js-hidden" id="{{name}}_text">
-                        <p>{{selectedText}}</p>
-                    </div>
-                    {{/if}} {{/each}}
-                </div>
-            </fieldset>
-            <button type="submit" class="button">Continue</button>
-        </form>
-    </div>
+  <div class="column-two-thirds reducemargin">
+    {{> common/back}} {{> common/errors}}
+    <h1 class="heading-large">{{pageTitle}}</h1>
+    <form method="post" autocomplete="off" novalidate>
+      <fieldset class="inline" data-required data-error="{{errorMessage}}">
+        <legend class="visually-hidden">{{pageTitle}}</legend>
+        <div class="form-group">
+          {{#each items}}
+          <label for="{{id}}" class="block-label selection-button-radio" {{#if selectedText}}data-target="{{name}}_text" {{/if}}>
+            <input id="{{id}}" type="radio" name="{{name}}" value="{{id}}" {{#if checked}}checked{{/if}}>
+              <span class="heading-small"> {{text}}</span>
+                {{#if subText}}
+                  <br>{{subText}}
+                {{/if}}
+            </label> {{#if selectedText}}
+          <div class="panel panel-border-narrow js-hidden" id="{{name}}_text">
+            <p>{{selectedText}}</p>
+          </div>
+          {{/if}} {{/each}}
+        </div>
+      </fieldset>
+      <button type="submit" class="button">Continue</button>
+    </form>
+  </div>
 </div>
-
