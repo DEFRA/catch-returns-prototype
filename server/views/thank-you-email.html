@@ -1,0 +1,43 @@
+<div class="grid-row">
+    <div class="column-two-thirds reducemargin">
+        {{> common/back}}
+        {{> common/errors}}
+        <div class="info">
+	 				<p style="width: 90%">An email has been sent to the address provided</p>
+				</div>
+        <h1 class="heading-large">{{pageTitle}}</h1> 
+        <p class="group">
+	   	    Thank you for entering your salmon and sea trout catch return as required 
+	   	    in the National Fisheries Byelaws 1996, Byelaw 3(1) - Migratory Salmonid Catch 
+	   	    Returns. 
+	   	</p>
+        <p class="group">
+	    	The information you submitted is important as it helps to monitor, assess 
+	    	and manage stocks in a sustainable way and gives us accurate statistics.
+		</p>
+        <p class="group">
+		    We recommend that you download or email a record of your return so that you can 
+		    show that you have complied with the byelaw. 		
+	   	</p>
+      <h3 class="heading-small">Download your catch return</h3>
+      <a href="/public/pdf/catchReturnPdf.pdf.pdf" download="/public/pdf/catchReturnPdf.pdf" title="Download catch return">Download a record of your catch (PDF)</a>
+       
+       
+      <h3 class="heading-small">Email your catch return</h3>
+      <form method="post" autocomplete="off" novalidate>
+        <fieldset>
+          <div class="form-group">
+            <label for="emailAddress">Send a record of my catch to this email address:</label>
+            <br>
+            <input type="text" maxlength="100" aria-required="true" id="emailAddress" name="emailAddress" value="">
+            <button class="button" type="submit" name="_eventId_email">Send email</button>
+          </div>
+        </fieldset>
+      </form>
+      <a href="/" class="button button-secondary">Exit</a>
+
+
+
+    </div>
+</div>
+

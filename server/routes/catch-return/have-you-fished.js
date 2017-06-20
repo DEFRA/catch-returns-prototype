@@ -1,8 +1,10 @@
 const handlers = {
   get: function (request, reply) {
     return reply.view('have-you-fished', {
-      pageTitle: 'Have you fished?',
+      pageTitle: 'Have you fished during the period of your licence?',
       errorMessage: 'Tell us if you fished',
+      startText: request.session.startText,
+      endText: request.session.endText,
       items: {
         one: {
           text: 'Yes',

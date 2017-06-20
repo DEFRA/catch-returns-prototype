@@ -17,12 +17,13 @@
         <br>
         <form method="post" autocomplete="off" novalidate>
             <fieldset data-required data-error="{{errorMessage}}">
+                <legend class="visually-hidden">{{pageTitle}}</legend>
                 <div class="form-group">
-                    <label class="form-label" for="licence_number">
+                    <label class="form-label" for="licenceNumber">
                         <span class="bold">Enter the last 6 digits of your licence number</span>
                         <span class="form-hint">For example, B7A718</span>
                       </label>
-                    <input class="form-control" id="licence_number" name="licence_number" value="{{licence_number}}" type="text">
+                    <input class="form-control" id="licenceNumber" name="licenceNumber" value="{{licenceNumber}}" type="text">
                 </div>
             </fieldset>
             <!--<h2 class="heading-medium">What is your postcode?</h2>-->

@@ -1,0 +1,16 @@
+<div class="grid-row">
+  <div class="column-two-thirds reducemargin">
+    {{> common/back}} {{> common/errors}}
+    <h1 class="heading-large">{{pageTitle}}</h1>
+    <p>You did not fish during this licence period. Click the 'Cancel' button below if this is not correct.</p>
+    <p class="group">If you expect to fish again this season and your current licence is still valid please click the 'Exit and continue catch
+      return later' button to return at a later date. You will then be able to update your return with further catches. </p>
+    <p class="group">Otherwise, if you have finished fishing for the season on this licence, please click the 'Submit catch return' button
+      to complete your catch return. Once submitted you will not be able to add or edit your return.</p>
+    <p class="group">Your saved information may be automatically submitted at the end of the fishing season. </p>
+
+    <a href="thank-you" onclick="confirm('Confirm that you hve finished fishing for the season on this licence');" class="button">Submit catch return</a>
+    <a href="add-river" class="button">Cancel</a>
+    <a href="/" class="button button-secondary">Exit and continue catch return later</a>
+  </div>
+</div>

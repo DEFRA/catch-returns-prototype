@@ -5,6 +5,7 @@
         <h1 class="heading-large">{{pageTitle}}</h1> 
         <form method="post" autocomplete="off" novalidate>
             <fieldset class="inline" data-required data-error="{{errorMessage}}">
+                <legend class="visually-hidden">{{pageTitle}}</legend>
                 <div class="form-group">
                     {{#each items}}
                     <label for="{{id}}" class="block-label selection-button-radio" {{#if selectedText}}data-target="{{name}}_text" {{/if}}>

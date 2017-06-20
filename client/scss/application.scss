@@ -23,3 +23,66 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.button-secondary {
+  background-color: #dee0e2!important;
+  color: #0b0c0c!important;
+  box-shadow: 0 2px 0 #b5babe!important;
+}
+
+.info {
+  border: 1px solid #4F8A10;
+  background-color: #FFF3CF;
+  color: #4F8A10;
+  margin: 0 0 -0.5em -0.5em;
+  padding: 0.5em;
+}
+
+.form-group-number {
+  width: 50px;
+}
+
+table {
+  border: none;
+}
+
+table td,
+table th {
+  border: none;
+  border-bottom: solid 1px #bfc1c3;
+  padding: 0.7em 0.5em 0.7em 1em;
+  border: solid 1px #a1acb2;
+}
+
+table th {
+  background-color: #dee0e2;
+}
+
+#day {
+  width: 61px;
+  float: left;
+}
+
+#month {
+  width: 82px;
+  float: left;
+}
+
+#year {
+  width: 70px;
+  float: left;
+}
+
+.form-group-day {
+ display: inline;
+ width: 76px;
+}
+
+.form-group-month {
+ display: inline;
+ width: 95px;
+}
+
+.form-group-year {
+ display: inline;
+ width: 70px;
+}

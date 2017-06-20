@@ -22,8 +22,7 @@ const handlers = {
   post: function (request, reply) {
     var licenceNumber = request.payload.licenceNumber
     returnURL = request.query.returnUrl
-
-    if (licenceNumber === 'Old') {
+     if (licenceNumber === 'Old') {
       return reply.redirect('old-licence-number')
     } else {
       return reply.redirect('new-licence-number')

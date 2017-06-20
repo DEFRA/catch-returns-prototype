@@ -2,9 +2,11 @@
     <div class="column-two-thirds reducemargin">
         {{> common/back}}
         {{> common/errors}}
-        <h1 class="heading-large">{{pageTitle}}</h1> 
-        <form method="post" autocomplete="off" novalidate>
+        <!--<h1 class="heading-large">{{pageTitle}}</h1> -->
+        <h1 class="heading-large">Have you fished during the period of your licence? ({{startText}} and {{endText}})</h1> 
+        <!--<form method="post" autocomplete="off" novalidate>
             <fieldset class="inline" data-required data-error="{{errorMessage}}">
+                 <legend class="visually-hidden">Have you fished during the period of your licence? ({{startText}} and {{endText}})</legend>
                 <div class="form-group">
                     {{#each items}}
                     <label for="{{id}}" class="block-label selection-button-radio" {{#if selectedText}}data-target="{{name}}_text" {{/if}}>
@@ -21,7 +23,11 @@
                 </div>
             </fieldset>
             <button type="submit" class="button">Continue</button>
-        </form>
+        </form>-->
+
+        <a href="add-river" class="button">Yes</a>
+        <a href="did-not-fish" class="button">No</a>
+
     </div>
 </div>
 
