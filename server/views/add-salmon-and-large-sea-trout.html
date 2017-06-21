@@ -1,28 +1,8 @@
 <div class="grid-row">
   <div class="column-full reducemargin">
-    {{> common/back}} {{> common/errors}}
-
-
-
-    <h2 class="heading-large">Select river</h2>
-    <form method="post" autocomplete="off" novalidate>
-      <fieldset class="inline" data-required data-error="{{errorMessage}}">
-        <legend class="visually-hidden">Select river</legend>
-        <div class="form-group">
-          <label class="form-label" for="select-box">River name</label>
-          <select class="form-control" id="riverName" name="riverName">
-                      <option value="???">Add all rivers fished in</option>
-                      <option value="???">Add all rivers fished in</option>
-                      <option value="???">Add all rivers fished in</option>
-                    </select>
-        </div>
-      </fieldset>
-      <button type="submit" class="button">Next</button>
-      <a href="review" class="button button-secondary">Cancel</a>
-    </form>
-
-
-
+    {{> common/back}} {{> common/errors}} 
+    
+    
 
 
     <h1 class="heading-large">Add salmon and large sea trout (over 1lb) for river {{riverName}}</h1>
@@ -36,8 +16,8 @@
 
 
           <div class="form-group form-group-day">
-            <label class="form-label day" for="catch-day">Day</label>
-            <select class="form-control" id="day" aria-required="true" name="dailyIndividualCatchEffort.dayOfCapture">
+            <label class="form-label day" for="day">Day</label>
+            <select class="form-control" id="day" aria-required="true" name="day">
                     <option value="-1" selected="selected">Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -50,8 +30,8 @@
                   </select>
           </div>
           <div class="form-group form-group-month">
-            <label class="form-label month" for="catch-month">Month</label>
-            <select class="form-control" id="month" type="text" aria-required="true" name="dailyIndividualCatchEffort.monthOfCapture">
+            <label class="form-label month" for="month">Month</label>
+            <select class="form-control" id="month" type="text" aria-required="true" name="month">
                     <option value="1" selected="selected">January</option>
                     <option value="2" selected="selected">February</option>
                     <option value="3" selected="selected">March</option>
@@ -67,8 +47,8 @@
                   </select>
           </div>
           <div class="form-group form-group-year">
-            <label class="form-label year" for="catch-year">Year</label>
-            <select class="form-control" id="year" aria-required="true" name="dailyIndividualCatchEffort.yearOfCapture">
+            <label class="form-label year" for="year">Year</label>
+            <select class="form-control" id="year" aria-required="true" name="year">
                       <option value="2016" selected="selected">2016</option>	
                       <option value="2017" selected="selected">2017</option>						
                     </select>
@@ -84,11 +64,11 @@
         <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river</legend>
         <div class="form-group">
           <h3 class="heading-small">Type of catch</h3>
-          <label for="salmonAndGrilse" class="block-label selection-button-radio">salmonAndGrilse
-                  <input id="salmonAndGrilse" type="radio" name="typeOfFish" value="salmonAndGrilse">
+          <label for="salmonAndGrilse" class="block-label selection-button-radio">Salmon and Grilse
+                  <input id="salmonAndGrilse" type="radio" name="fishType" value="Salmon and Grilse">
                 </label>
-          <label for="SeaTrout" class="block-label selection-button-radio">SeaTrout
-                  <input id="SeaTrout" type="radio" name="typeOfFish" value="SeaTrout">
+          <label for="SeaTrout" class="block-label selection-button-radio">Sea Trout
+                  <input id="SeaTrout" type="radio" name="fishType" value="Sea Trout">
                 </label>
         </div>
       </fieldset>
@@ -98,11 +78,11 @@
           <h3 class="heading-small">Weight of catch</h3>
 
           <div class="form-group form-group-day">
-            <label class="form-label day" for="catch-lb">lb</label>
+            <label class="form-label day" for="lb">lb</label>
             <input class="form-control" id="lb" name="lb" type="number">
           </div>
           <div class="form-group form-group-month">
-            <label class="form-label month" for="catch-oz">oz</label>
+            <label class="form-label month" for="oz">oz</label>
             <input class="form-control" id="oz" name="oz" type="number">
           </div>
           <!--<button class="button button-secondary">Convert to metric</button>-->
@@ -135,11 +115,20 @@
                 </label>
         </div>
       </fieldset>
+      <button type="submit" class="button">Save and add another</button>
+    <button type="submit" class="button">Save and continue</button>
+    <a href="review" class="button button-secondary">Cancel</a> 
     </form>
 
 
-    <button type="submit" class="button">Save and add another</button>
-    <button type="submit" class="button">Save and continue</button>
-    <a href="review" class="button button-secondary">Cancel</a>
+    
+    
+
+
+
+
+
+
+
   </div>
 </div>

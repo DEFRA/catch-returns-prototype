@@ -1,58 +1,53 @@
 <div class="grid-row">
-	<div class="column-full reducemargin">
-		{{> common/back}} {{> common/errors}}
+  <div class="column-full reducemargin">
+    {{> common/back}} {{> common/errors}} 
+    
+    
+    <h1 class="heading-large">Small sea trout caught for river {{riverName}}</h1>
+    <p>For each month, click on the numbers to enter small sea trout caught and released. For nil catches click the Save button.
+    </p>
+    <table class="smallSeaTroutInput" style="width: 90%">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Fly</th>
+          <th>Spinner</th>
+          <th>Bait</th>
+          <th>Released</th>
+        </tr>
+      </thead>
+      <tbody>
 
-		<h2 class="heading-large">Select river</h2>
-		<form method="post" autocomplete="off" novalidate>
-			<fieldset class="inline" data-required data-error="{{errorMessage}}">
-				<legend class="visually-hidden">Select river</legend>
-				<div class="form-group">
-					<label class="form-label" for="select-box">River name</label>
-					<select class="form-control" id="riverName" name="riverName">
-                      <option value="???">Add all rivers fished in</option>
-                      <option value="???">Add all rivers fished in</option>
-                      <option value="???">Add all rivers fished in</option>
-                    </select>
-				</div>
-			</fieldset>
-			<button type="submit" class="button">Next</button>
-			<a href="review" class="button button-secondary">Cancel</a>
-		</form>
+       
+        {{#each validMonths}} 
+          <tr>
+          <td>{{month}}</td>
+            <td>
+              <input class="gridInput" id="fly" type="text" value="0" maxlength="3" size="7" aria-required="true" name="fly">
+            </td>
+            <td>
+              <input class="gridInput" id="spinner" type="text" value="0" maxlength="3" size="7" aria-required="true" name="spinner">
+            </td>
+            <td>
+              <input class="gridInput" id="bait" type="text" value="0" maxlength="3" size="7" aria-required="true" name="bait">
+            </td>
+            <td>
+              <input class="gridInput" id="NumberOfFishReleased" type="text" value="0" maxlength="3" size="7" aria-required="true" name="NumberOfFishReleased">
+            </td>
+          </tr>
+        {{/each}} 
+      </tbody>
+    </table>
+    <br>
+    <button type="submit" class="button">Add salmon and large sea trout</button>
+    <a href="review" class="button">Save and continue</a> 
+    
+   
 
 
-		<h1 class="heading-large">Small sea trout caught for river {{riverName}}</h1>
-		<p>For each month, click on the numbers to enter small sea trout caught and released. For nil catches click the Save button.
-			</p>
-		<table class="smallSeaTroutInput" style="width: 90%">
-			<thead>
-				<tr>
-					<th>Month</th>
-					<th>Fly</th>
-					<th>Spinner</th>
-					<th>Bait</th>
-					<th>Released</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>March 2014</td>
-					<td>
-						<input class="gridInput" id="fly" type="text" value="0" maxlength="3" size="7" aria-required="true" name="smallSeaTroutCatchEffortMap[MARCH].numberOfFishCaughtByFly">
-					</td>
-					<td>
-						<input class="gridInput" id="spinner" type="text" value="0" maxlength="3" size="7" aria-required="true" name="smallSeaTroutCatchEffortMap[MARCH].numberOfFishCaughtBySpinner">
-					</td>
-					<td>
-						<input class="gridInput" id="bait" type="text" value="0" maxlength="3" size="7" aria-required="true" name="smallSeaTroutCatchEffortMap[MARCH].numberOfFishCaughtByBait">
-					</td>
-					<td>
-						<input class="gridInput" id="released" type="text" value="0" maxlength="3" size="7" aria-required="true" name="smallSeaTroutCatchEffortMap[MARCH].numberOfFishReleased">
-					</td>
-				</tr>
-			</tbody>
-		</table>
 
-		<button type="submit" class="button">Add salmon and large sea trout</button>
-		<a href="review" class="button">Save and continue</a>
-	</div>
+
+
+
+  </div>
 </div>

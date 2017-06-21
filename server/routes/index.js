@@ -14,6 +14,8 @@ module.exports = [].concat(
   require('./catch-return/have-you-fished'),
   require('./catch-return/did-not-fish'),
   require('./catch-return/add-river'),
+  require('./catch-return/select-river-sea-trout'),
+  require('./catch-return/select-river-salmon'),
   require('./catch-return/add-small-sea-trout'),
   require('./catch-return/add-salmon-and-large-sea-trout'),
   require('./catch-return/thank-you'),

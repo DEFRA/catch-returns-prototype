@@ -10,101 +10,96 @@ const handlers = {
     request.session.licenceNumber = request.payload.licenceNumber
 
 
-    if (request.session.licenceNumber === '635342111') {
-      request.session.licenceNumber = '635342111'
-      request.session.holderName = 'John Smith'
-      request.session.dateOfBirth = '1 July 1980'
-      request.session.email = 'john.smith@email.com'
-      request.session.mobile = 07708123456
-      request.session.Address = 'Flat 20A, Knutsford Road, Warrington WA4 1AB'
-      request.session.licenceLength = '1 day'
-      request.session.startText = '2 April 2017'
-      request.session.endText = '3 April 2017'
-      return reply.redirect('have-you-fished')
-
-    } else if (request.session.licenceNumber === '635342222') {
+    if (request.session.licenceNumber === '635341111') {
       request.session.licenceNumber = '635342222'
-      request.session.holderName = 'Fred Perry'
-      request.session.dateOfBirth = '1 July 1980'
-      request.session.email = 'fred.perry@email.com'
-      request.session.mobile = 07708123333
-      request.session.Address = 'Flat 20A, Knutsford Road, Warrington WA4 1AB'
-      request.session.licenceLength = '8 days'
-      request.session.startText = '8 May 2017'
-      request.session.endText = '16 May 2017'
+
+      // Rivers
+      global.rivers = []
+
+    
+      // valid months
+      global.validMonths = [
+        {month:'June 17'}
+      ]
+       
+      // Small fish
+      global.smallFish = [
+        { month: "May 17", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+      ]
+
+      // Big Fish
+      global.bigFish = []
+
       return reply.redirect('have-you-fished')
 
-    } else if (request.session.licenceNumber === '635342333') {
-      request.session.licenceNumber = '635342333'
-      request.session.holderName = 'Tom jones'
-      request.session.dateOfBirth = '1 July 1970'
-      request.session.email = 'tom.jones@email.com'
-      request.session.mobile = 07708124444
-      request.session.Address = 'Flat 20A, Knutsford Road, Warrington WA4 1AB'
-      request.session.licenceLength = '12 months'
-      request.session.startText = '2 June 2016'
-      request.session.endText = '1 June 2017'
-      return reply.redirect('have-you-fished')
-    }
-
-    if (request.session.licenceNumber === '635342444') {
+    } else if (request.session.licenceNumber === '635342444') {
       request.session.licenceNumber = '635342444'
-      request.session.holderName = 'Tim Walker'
-      request.session.dateOfBirth = '1 July 1970'
-      request.session.email = 'tim.walker@email.com'
-      request.session.mobile = 07708124444
-      request.session.Address = 'Flat 20A, Knutsford Road, Warrington WA4 1AB'
-      request.session.licenceLength = '12 months'
-      request.session.startText = '2 June 2017'
-      request.session.endText = '1 June 2018'
 
-      // Stored rivers
+      // Rivers
+
       global.rivers = [
         {
           riverName: 'Thames',
           riverTown: 'London',
           riverDaysBeforeJune: 4,
           riverDaysAfterJune: 3,
-          SmallSeaTrout: [
-            { river: "Thames", month: "March", fly: 3, spinner: 3, bait: 2, NumberOfFishReleased: 5, },
-            { river: "Thames", month: "April", fly: 1, spinner: 6, bait: 3, NumberOfFishReleased: 9, },
-            { river: "Thames", month: "August", fly: 2, spinner: 0, bait: 4, NumberOfFishReleased: 0, }
-          ],
-          SalmonAndLargeSeaTrout: [
-            { river: "Thames", date: "23/09/2013", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', NumberOfFishReleased: 5, },
-            { river: "Thames", date: "23/09/2013", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', NumberOfFishReleased: 5, },
-          ],
         },
-
         {
           riverName: 'Weaver',
           riverTown: 'Northwich',
           riverDaysBeforeJune: 0,
           riverDaysAfterJune: 5,
-          SmallSeaTrout: [
-            { river: "Weaver", month: "March", fly: 2, spinner: 0, bait: 8, NumberOfFishReleased: 6, }
-          ],
-          SalmonAndLargeSeaTrout: [
-            { river: "Weaver", date: "23/09/2013", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', NumberOfFishReleased: 5, },
-            { river: "Weaver", date: "23/09/2013", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', NumberOfFishReleased: 5, },
-          ],
         },
         {
           riverName: 'Avon',
           riverTown: 'Stratford',
           riverDaysBeforeJune: 2,
           riverDaysAfterJune: 3,
-          SmallSeaTrout: [
-            { river: "Avon", month: "August", fly: 7, spinner: 1, bait: 3, NumberOfFishReleased: 3, }
-          ],
-          SalmonAndLargeSeaTrout: [
-            { river: "Avon", date: "23/09/2013", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', NumberOfFishReleased: 5, },
-            { river: "Avon", date: "23/09/2013", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', NumberOfFishReleased: 5, },
-          ],
         }
       ]
 
+       // valid months
+      global.validMonths = [
+        {month:'June 16'}, 
+        {month:'July 16'},
+        {month:'Augaust 16'},
+        {month:'Septembe 16'},
+        {month:'October 16'},
+        {month:'November 16'},
+        {month:'December 16'},
+        {month:'January 17'},
+        {month:'February 17'},
+        {month:'March 17'},
+        {month:'April 17'},
+        {month:'May 17'}, 
+        {month:'June 17'},
+        ]
 
+      //Small fish
+       global.smallFish = [
+        { river: "Thames", month: "June 16", fly: 3, spinner: 0, bait: 2, NumberOfFishReleased: 5, },
+        { river: "Thames", month: "July 16", fly: 3, spinner: 0, bait: 2, NumberOfFishReleased: 5, },
+        { river: "Thames", month: "Augaust 16", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Thames", month: "Septembe 16", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Thames", month: "October 16", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Avon", month: "October 16", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Avon", month: "November 16", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Avon", month: "December 16", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Avon", month: "January 17", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Avon", month: "February 17", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Weaver", month: "March 17", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Weaver", month: "April 17", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, },
+        { river: "Weaver", month: "May 17", fly: 0, spinner: 0, bait: 0, NumberOfFishReleased: 0, }
+      ]
+
+      // Big Fish
+      global.bigFish = [
+        { river: "Avon", date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+        { river: "Avon", date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
+        { river: "Weaver", date: "3/03/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'No', },
+        { river: "Weaver", date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
+        { river: "Thames", date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+      ]
 
       return reply.redirect('review')
     }

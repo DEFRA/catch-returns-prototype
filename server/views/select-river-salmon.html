@@ -1,0 +1,27 @@
+<div class="grid-row">
+  <div class="column-full reducemargin">
+    {{> common/back}} {{> common/errors}} 
+    
+<h2 class="heading-large">{{pageTitle}}</h2>
+    <form method="post" autocomplete="off" novalidate>
+      <fieldset class="inline" data-required data-error="{{errorMessage}}">
+        <legend class="visually-hidden">Select river</legend>
+        <div class="form-group">
+          <label class="form-label" for="riverName">River name</label>
+          <select class="form-control" id="riverName" name="riverName">
+            {{#each rivers}}
+              <option value="{{riverName}}">{{riverName}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </fieldset>
+      <button type="submit" class="button">Next</button>
+      <a href="review" class="button button-secondary">Cancel</a>
+    </form>
+
+
+
+
+
+  </div>
+</div>

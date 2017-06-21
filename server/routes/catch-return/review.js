@@ -4,11 +4,17 @@ const handlers = {
       pageTitle: 'Review the information that you have entered',
       //errorMessage: 'Tell us how long your licence number is',
       rivers: global.rivers,
-      SmallSeaTrout: global.rivers.SmallSeaTrout,
-      SalmonAndLargeSeaTrout: global.rivers.SalmonAndLargeSeaTrout,
-      count: global.rivers.length,
-    })
-  },
+      riverCount: global.rivers.length,
+      validMonths: global.validMonths,
+      validMonthsCount: global.validMonths.length,
+      smallFish: global.smallFish,
+      smallFishCount: global.smallFish.length,
+      bigFish: global.bigFish,
+      bigFishCount: global.bigFish.length,
+      river: request.session.riverName
+  })
+
+},
   post: function (request, reply) {
 
 

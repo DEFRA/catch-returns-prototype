@@ -5,7 +5,7 @@
 
     <h3 class="heading-small">Rivers fished</h3>
 
-ß
+
 
     <table class="riversFishedReview" style="width: 90%">
       <thead>
@@ -19,6 +19,7 @@
         </tr>
       </thead>
       <tbody>
+
         {{#each rivers}}
         <tr>
           <td>{{riverName}}</td>
@@ -35,7 +36,7 @@
     </table>
     <br>
     <p>
-      <a hreft="add-river" class="button">Add another river</a>
+      <a href="add-river" class="button">Add another river</a>
     </p>
     <h3 class="heading-small">Small sea trout</h3>
     <table class="smallFishReview" style="width: 90%">
@@ -49,20 +50,26 @@
         </tr>
       </thead>
       <tbody>
-        {{#each rivers}} {{#each SmallSeaTrout}}
+
+        {{#each smallFish}}
         <tr>
           <td>{{river}}</td>
           <td>{{month}}</td>
-          <td>{{NumberOfFishCaugh}}</td>
+          <td>Total number</td>
           <td>{{NumberOfFishReleased}}</td>
           <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
         </tr>
-        {{/each}} {{/each}}
+        {{/each}}
+
       </tbody>
     </table>
     <br>
     <p>
-      <a hreft="add-small-sea-trout" class="button">Add small sea trout</a>
+      {{#isnt riverCount 1}}
+      <a href="select-river-sea-trout" class="button">Add small sea trout</a>
+      {{else}}
+      <a href="add-small-sea-trout" class="button">Add small sea trout</a>
+      {{/isnt}}
     </p>
     <h3 class="heading-small">Salmon and large sea trout</h3>
     <table class="largeFishReview" style="width: 90%">
@@ -78,7 +85,8 @@
         </tr>
       </thead>
       <tbody>
-        {{#each rivers}} {{#each SalmonAndLargeSeaTrout}}
+
+        {{#each bigFish}}
         <tr>
           <td>{{river}}</td>
           <td>{{date}}</td>
@@ -88,14 +96,18 @@
           <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
           <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
         </tr>
-        {{/each}} {{/each}}
+        {{/each}}
+
       </tbody>
     </table>
     <br>
     <p>
-      <a hreft="add-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout</a>
+      {{#isnt riverCount 1}}
+      <a href="select-river-salmon" class="button">Add salmon and large sea trout</a>
+      {{else}}
+      <a href="add-small-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout</a>
+      {{/isnt}}
     </p>
-
 
     <p class="group">If you expect to fish again this season and your current licence is still valid please click the 'Exit and continue catch
       return later' button to return at a later date. You will then be able to update your return with further catches. </p>

@@ -6,15 +6,27 @@ const handlers = {
       errorMessageTwo: 'Enter the nearest town',
       errorMessageThree: 'Enter the number of days you fished before 16th June',
       errorMessageFour: 'Enter the number of days you fished after 16th June',
+      currentRiver: true,
     })
   },
   post: function (request, reply) {
     request.session.riverName = request.payload.riverName
-    request.session.nearestTown = request.payload.nearestTown
-    request.session.daysFishedBefore = request.payload.daysFishedBefore
-    request.session.daysFishedAfter = request.payload.daysFishedAfter
+    request.session.riverTown = request.payload.nearestTown
+    request.session.riverDaysBeforeJune = request.payload.daysFishedBefore
+    request.session.riverDaysAfterJune = request.payload.daysFishedAfter
 
-    return reply.redirect('review')
+    // Save river
+    var river = JSON.parse(JSON.stringify(request.session))
+    global.rivers.push(river)
+
+    
+
+
+    //return reply.redirect('review')
+    // return reply.redirect('add-small-sea-trout')
+    // return reply.redirect('add-salmon-and-large-sea-trout')
+
+
   }
 }
 
