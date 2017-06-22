@@ -2,9 +2,6 @@
   <div class="column-full reducemargin">
     {{> common/back}} {{> common/errors}}
 
-
-
-
     <h1 class="heading-large">Add salmon and large sea trout (over 1lb) for river {{riverName}}</h1>
 
     <form method="post" autocomplete="off" novalidate>
@@ -14,45 +11,101 @@
         <div class="form-group">
           <h3 class="heading-small">Date of catch</h3>
 
-
+          {{#if licencelength}}
           <div class="form-group form-group-day">
             <label class="form-label day" for="day">Day</label>
             <select class="form-control" id="day" aria-required="true" name="day">
-                    <option value="-1" selected="selected">Day</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                  </select>
+                <option value="-1" selected="selected">Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
           </div>
           <div class="form-group form-group-month">
             <label class="form-label month" for="month">Month</label>
             <select class="form-control" id="month" type="text" aria-required="true" name="month">
-                    <option value="1" selected="selected">January</option>
-                    <option value="2" selected="selected">February</option>
-                    <option value="3" selected="selected">March</option>
-                    <option value="4" selected="selected">Aprill</option>
-                    <option value="5" selected="selected">May</option>
-                    <option value="6" selected="selected">June</option>
-                    <option value="7" selected="selected">July</option>
-                    <option value="8" selected="selected">Augaust</option>
-                    <option value="9" selected="selected">Sepetmber</option>
-                    <option value="10" selected="selected">October</option>
-                    <option value="11" selected="selected">November</option>
-                    <option value="12" selected="selected">December</option>
-                  </select>
+              <option value="1" selected="selected">January</option>
+              <option value="2" selected="selected">February</option>
+              <option value="3" selected="selected">March</option>
+              <option value="4" selected="selected">Aprill</option>
+              <option value="5" selected="selected">May</option>
+              <option value="6" selected="selected">June</option>
+              <option value="7" selected="selected">July</option>
+              <option value="8" selected="selected">Augaust</option>
+              <option value="9" selected="selected">Sepetmber</option>
+              <option value="10" selected="selected">October</option>
+              <option value="11" selected="selected">November</option>
+              <option value="12" selected="selected">December</option>
+            </select>
           </div>
           <div class="form-group form-group-year">
             <label class="form-label year" for="year">Year</label>
             <select class="form-control" id="year" aria-required="true" name="year">
-                      <option value="2016" selected="selected">2016</option>	
-                      <option value="2017" selected="selected">2017</option>						
-                    </select>
+              <option value="2017" selected="selected">2017</option>	
+              <option value="2018" selected="selected">2018</option>						
+            </select>
           </div>
+          {{else}}
+          <div class="form-group form-group-day">
+            <label class="form-label day" for="day">Day</label>
+            <select class="form-control" id="day" aria-required="true" name="day">
+                <option value="-1" selected="selected">Day</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+          </div>
+          <div class="form-group form-group-month">
+            <label class="form-label month" for="month">Month</label>
+            <select class="form-control" id="month" type="text" aria-required="true" name="month">
+              <option value="4" selected="selected">Aprill</option>
+            </select>
+          </div>
+          <div class="form-group form-group-year">
+            <label class="form-label year" for="year">Year</label>
+            <select class="form-control" id="year" aria-required="true" name="year">
+              <option value="2017" selected="selected">2017</option>	
+            </select>
+          </div>
+          {{/if}}
+
+
+
+
+
 
 
 

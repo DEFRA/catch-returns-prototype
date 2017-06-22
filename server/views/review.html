@@ -52,13 +52,15 @@
       <tbody>
 
         {{#each smallFish}}
-        <tr>
-          <td>{{river}}</td>
-          <td>{{month}}</td>
-          <td>Total number</td>
-          <td>{{NumberOfFishReleased}}</td>
-          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
-        </tr>
+          {{#isnt total 0}}
+            <tr>
+              <td>{{river}}</td>
+              <td>{{month}}</td>
+              <td>{{total}}</td>
+              <td>{{NumberOfFishReleased}}</td>
+              <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
+            </tr>
+          {{/isnt}}
         {{/each}}
 
       </tbody>

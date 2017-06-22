@@ -9,6 +9,7 @@ const handlers = {
       errorMessageFive: '',
       riverName: request.session.riverName,
       rivers: global.rivers,
+      licencelength: request.session.licencelength
     })
   },
   post: function (request, reply) {

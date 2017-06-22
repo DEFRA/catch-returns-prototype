@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.redirect('catch-return/which-licence-do-you-have')
+    return reply.redirect('catch-return/new-licence-number')
   }
 }
 

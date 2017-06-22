@@ -14,29 +14,57 @@ const handlers = {
     if (request.session.licenceNumber === 'C7A711') {
       request.session.licenceNumber = '00010418-3WC3JDS-C7A711'
       request.session.startText = '2 April 2017'
-      request.session.endText = '3 April 2017'
+      request.session.endText = '10 April 2017'
+      request.session.licencelength = false
 
       // Rivers
       global.rivers = []
 
       // valid months
-      global.validMonths = [
-        { month: 'June 17' }
-      ]
+      // global.validMonths = [
+      //   { month: 'June 17' }
+      // ]
 
       // Small fish
        global.smallFish = [
-        { river: "Thames", month: "June 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
+        //{ river: "Thames", month: "June 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
       ]
 
       // Big Fish
       global.bigFish = []
       return reply.redirect('have-you-fished')
 
-    } else if (request.session.licenceNumber === 'C7A744') {
+    } else if (request.session.licenceNumber === 'C7A722') {
+      request.session.licenceNumber = '00010418-3WC3JDS-C7A722'
+      request.session.startText = '2 June 2017'
+      request.session.endText = '3 June 2018'
+      request.session.licencelength = true
+
+      // Rivers
+      global.rivers = []
+
+      // valid months
+      // global.validMonths = [
+      //   { month: 'June 17' }
+      // ]
+
+      // Small fish
+       global.smallFish = [
+        //{ river: "Thames", month: "June 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
+      ]
+
+      // Big Fish
+      global.bigFish = []
+      return reply.redirect('have-you-fished')
+
+    } 
+    
+    
+    else if (request.session.licenceNumber === 'C7A744') {
       request.session.licenceNumber = '00010418-3WC3JDS-C7A744'
       request.session.startText = '2 June 2017'
       request.session.endText = '1 June 2018'
+      request.session.licencelength = true
 
       // Rivers
       global.rivers = [
@@ -61,21 +89,21 @@ const handlers = {
       ]
 
       // valid months
-      global.validMonths = [
-        { month: 'June 16' },
-        { month: 'July 16' },
-        { month: 'Augaust 16' },
-        { month: 'Septembe 16' },
-        { month: 'October 16' },
-        { month: 'November 16' },
-        { month: 'December 16' },
-        { month: 'January 17' },
-        { month: 'February 17' },
-        { month: 'March 17' },
-        { month: 'April 17' },
-        { month: 'May 17' },
-        { month: 'June 17' },
-      ]
+      // global.validMonths = [
+      //   { month: 'June 16' },
+      //   { month: 'July 16' },
+      //   { month: 'Augaust 16' },
+      //   { month: 'Septembe 16' },
+      //   { month: 'October 16' },
+      //   { month: 'November 16' },
+      //   { month: 'December 16' },
+      //   { month: 'January 17' },
+      //   { month: 'February 17' },
+      //   { month: 'March 17' },
+      //   { month: 'April 17' },
+      //   { month: 'May 17' },
+      //   { month: 'June 17' },
+      // ]
 
       //Small fish
       global.smallFish = [

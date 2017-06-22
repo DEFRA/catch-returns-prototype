@@ -57,6 +57,10 @@ table th {
   background-color: #dee0e2;
 }
 
+table td:last-child, table th:last-child {
+  padding: 0.7em 0.5em 0.7em 1em;
+}
+
 #day {
   width: 61px;
   float: left;
@@ -73,17 +77,17 @@ table th {
 }
 
 .form-group-day {
- display: inline;
+ float: left;
  width: 76px;
 }
 
 .form-group-month {
- display: inline;
+ float: left;
  width: 95px;
 }
 
 .form-group-year {
- display: inline;
+float: left;
  width: 70px;
 }
 
@@ -93,4 +97,26 @@ table th {
 
 input[type=number] {
   width:50px;
+}
+
+.radio-list {
+    .block-label {
+        float: none;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        margin-bottom: 11px;
+
+        input {
+            top: 5px;
+        }
+
+        &.disabled {
+            cursor: default;
+            color: $secondary-text-colour;
+
+            &:hover {
+                border-color: $panel-colour;
+            }
+        }
+    }
 }

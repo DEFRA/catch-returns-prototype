@@ -19,20 +19,20 @@
       <tbody>
 
        <form method="post" autocomplete="off" novalidate>
-        {{#each validMonths}} 
+        {{#each smallFish}} 
           <tr>
-          <td>{{month}}</td>
+          <td><input class="gridInput" id="month" type="text" value="{{month}}" name="month" readonly></td>
             <td>
-              <input class="gridInput" id="fly" type="number" value="0" maxlength="3" size="7" aria-required="true" name="fly">
+              <input class="gridInput" id="fly" type="number" value="{{fly}}" name="fly">
             </td>
             <td>
-              <input class="gridInput" id="spinner" type="number" value="0" maxlength="3" size="7" aria-required="true" name="spinner">
+              <input class="gridInput" id="spinner" type="number" value="{{spinner}}" name="spinner">
             </td>
             <td>
-              <input class="gridInput" id="bait" type="number" value="0" maxlength="3" size="7" aria-required="true" name="bait">
+              <input class="gridInput" id="bait" type="number" value="{{bait}}" name="bait">
             </td>
             <td>
-              <input class="gridInput" id="NumberOfFishReleased" type="number" value="0" maxlength="3" size="7" aria-required="true" name="NumberOfFishReleased">
+              <input class="gridInput" id="NumberOfFishReleased" type="number" value="{{NumberOfFishReleased}}" name="NumberOfFishReleased">
             </td>
           </tr>
         {{/each}} 

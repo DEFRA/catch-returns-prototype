@@ -4,27 +4,38 @@ const handlers = {
       //pageTitle: 'Please enter details for the river where you fished',
       //errorMessage: '',
       riverName: request.session.riverName,
-      validMonths: global.validMonths,
+      smallFish: global.smallFish,
       rivers: global.rivers,
+      smallFish: global.smallFish,
+      smallFishCount: global.smallFish.length,
+
+      // Return users
+      month: request.session.month,
+      fly: request.session.fly,
+      spinner: request.session.spinner,
+      total: request.session.total,
+      NumberOfFishReleased: request.session.NumberOfFishReleased
     })
   },
   post: function (request, reply) {
-    request.session.river = request.session.riverName
-    request.session.month = request.session.month
-    request.session.fly = request.payload.fly
-    request.session.spinner = request.payload.spinner
-    request.session.bait = request.payload.bait
-    request.session.NumberOfFishReleased = request.payload.NumberOfFishReleased
 
-    request.session.NumberOfFishCaught = request.session.fly + request.session.spinner + request.session.bait
+    // for (i = 0; i < global.smallFish.length; i++) {
+      
+      request.session.river = request.session.riverName
+      request.session.month = request.payload.month
+      request.session.fly = request.payload.fly
+      request.session.spinner = request.payload.spinner
+      request.session.bait = request.payload.bait
+      request.session.total = Number(request.payload.fly) + Number(request.payload.spinner) + Number(request.payload.bait)
+      request.session.NumberOfFishReleased = request.payload.NumberOfFishReleased
 
-   
-
-    //if (request.session.NumberOfFishCaught > 0) {
-      // Save small fish
       var small = JSON.parse(JSON.stringify(request.session))
+      
       global.smallFish.push(small)
-    //}
+      //global.smallFish[i] = small
+
+    // }
+
 
 
     if (request.payload.next === "Review") {

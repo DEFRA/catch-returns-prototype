@@ -20,13 +20,13 @@ const handlers = {
 
 
       // valid months
-      global.validMonths = [
-        { month: 'June 17' }
-      ]
+      // global.validMonths = [
+      //   { month: 'June 17' }
+      // ]
 
       // Small fish
       global.smallFish = [
-        { river: "Thames", month: "June 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
+       // { river: "Thames", month: "June 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
       ]
 
       // Big Fish
@@ -63,21 +63,21 @@ const handlers = {
       ]
 
       // valid months
-      global.validMonths = [
-        { month: 'June 16' },
-        { month: 'July 16' },
-        { month: 'Augaust 16' },
-        { month: 'Septembe 16' },
-        { month: 'October 16' },
-        { month: 'November 16' },
-        { month: 'December 16' },
-        { month: 'January 17' },
-        { month: 'February 17' },
-        { month: 'March 17' },
-        { month: 'April 17' },
-        { month: 'May 17' },
-        { month: 'June 17' },
-      ]
+      // global.validMonths = [
+      //   { month: 'June 16' },
+      //   { month: 'July 16' },
+      //   { month: 'Augaust 16' },
+      //   { month: 'Septembe 16' },
+      //   { month: 'October 16' },
+      //   { month: 'November 16' },
+      //   { month: 'December 16' },
+      //   { month: 'January 17' },
+      //   { month: 'February 17' },
+      //   { month: 'March 17' },
+      //   { month: 'April 17' },
+      //   { month: 'May 17' },
+      //   { month: 'June 17' },
+      // ]
 
       //Small fish
       global.smallFish = [
