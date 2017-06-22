@@ -10,19 +10,30 @@ const handlers = {
   },
   post: function (request, reply) {
     request.session.river = request.session.riverName
+    request.session.month = request.session.month
     request.session.fly = request.payload.fly
     request.session.spinner = request.payload.spinner
     request.session.bait = request.payload.bait
     request.session.NumberOfFishReleased = request.payload.NumberOfFishReleased
-    
-    // Save small fish
-    var small = JSON.parse(JSON.stringify(request.session))
-    global.smallFish.push(small)
 
-    
-    //return reply.redirect('review')
+    request.session.NumberOfFishCaught = request.session.fly + request.session.spinner + request.session.bait
 
-    return reply.redirect('add-small-sea-trout')
+   
+
+    //if (request.session.NumberOfFishCaught > 0) {
+      // Save small fish
+      var small = JSON.parse(JSON.stringify(request.session))
+      global.smallFish.push(small)
+    //}
+
+
+    if (request.payload.next === "Review") {
+      return reply.redirect('review')
+    } else {
+      return reply.redirect('add-salmon-and-large-sea-trout')
+    }
+
+
   }
 }
 

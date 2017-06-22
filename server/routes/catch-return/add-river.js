@@ -7,25 +7,33 @@ const handlers = {
       errorMessageThree: 'Enter the number of days you fished before 16th June',
       errorMessageFour: 'Enter the number of days you fished after 16th June',
       currentRiver: true,
+
+      // Return users
+      riverName: request.session.riverName,
+      riverTown: request.session.riverTown,
+      riverDaysBeforeJune: request.session.riverDaysBeforeJune,
+      riverDaysAfterJune: request.session.riverDaysAfterJune
     })
   },
   post: function (request, reply) {
     request.session.riverName = request.payload.riverName
-    request.session.riverTown = request.payload.nearestTown
-    request.session.riverDaysBeforeJune = request.payload.daysFishedBefore
-    request.session.riverDaysAfterJune = request.payload.daysFishedAfter
+    request.session.riverTown = request.payload.riverTown
+    request.session.riverDaysBeforeJune = request.payload.riverDaysBeforeJune
+    request.session.riverDaysAfterJune = request.payload.riverDaysAfterJune
+
+
 
     // Save river
     var river = JSON.parse(JSON.stringify(request.session))
     global.rivers.push(river)
 
-    
-
-
-    //return reply.redirect('review')
-    // return reply.redirect('add-small-sea-trout')
-    // return reply.redirect('add-salmon-and-large-sea-trout')
-
+    if (request.payload.next === "Review") {
+      return reply.redirect('review')
+    } else if (request.payload.next === "SmallSeaTrout") {
+      return reply.redirect('add-small-sea-trout')
+    } else {
+      return reply.redirect('add-salmon-and-large-sea-trout')
+    }
 
   }
 }

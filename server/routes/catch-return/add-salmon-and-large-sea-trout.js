@@ -24,12 +24,18 @@ const handlers = {
     request.session.weight = request.payload.lb + 'lb ' + request.payload.oz + 'oz'
     request.session.MethodOfCapture = request.payload.MethodOfCapture
     request.session.released = request.payload.released
-    
+
     // Save big fish
     var big = JSON.parse(JSON.stringify(request.session))
     global.bigFish.push(big)
 
-    return reply.redirect('review')
+    if (request.payload.next === "Review") {
+      return reply.redirect('review')
+    } else {
+      return reply.redirect('add-salmon-and-large-sea-trout')
+    }
+    
+
   }
 }
 

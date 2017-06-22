@@ -239,25 +239,25 @@
       </fieldset>
       <fieldset class="inline" data-required data-error="{{errorMessageTwo}}">
         <div class="form-group">
-          <label class="form-label" for="nearestTown">Nearest town</label>
-          <input class="form-control" id="nearestTown" name="nearestTown" type="text">
+          <label class="form-label" for="riverTown">Nearest town</label>
+          <input class="form-control" id="riverTown" name="riverTown" value="{{riverTown}}" type="text">
         </div>
       </fieldset>
       <fieldset class="inline" data-required data-error="{{errorMessageThree}}">
         <div class="form-group">
-          <label class="form-label" for="daysFishedBefore">How many days (in digits) did you fish before 16 June?</label>
-          <input class="form-control form-group-number" id="daysFishedBefore" name="daysFishedBefore" type="text">
+          <label class="form-label" for="riverDaysBeforeJune">How many days (in digits) did you fish before 16 June?</label>
+          <input class="form-control form-group-number" id="riverDaysBeforeJune" name="riverDaysBeforeJune" value="{{riverDaysBeforeJune}} "type="text">
         </div>
       </fieldset>
       <fieldset class="inline" data-required data-error="{{errorMessageFour}}">
         <div class="form-group">
-          <label class="form-label" for="daysFishedAfter">How many days (in digits) did you fish after 16 June?</label>
-          <input class="form-control form-group-number" id="daysFishedAfter" name="daysFishedAfter" type="text">
+          <label class="form-label" for="riverDaysAfterJune">How many days (in digits) did you fish after 16 June?</label>
+          <input class="form-control form-group-number" id="riverDaysAfterJune" name="riverDaysAfterJune" value="{{riverDaysAfterJune}}" type="text">
         </div>
       </fieldset>
-      <button action="review"  action class="button">Save and continue</button>
-      <button action="add-small-sea-trout" class="button">Add small sea trout</button>
-      <button action="add-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout (over 1lb)</button>
+      <button value="Review" name="next" class="button" type="Submit">Save and continue</button>
+      <button value="SmallSeaTrout" name="next" class="button" type="Submit">Add small sea trout</button>
+      <button value="SalmonAndLargeSeaTrout" name="next" class="button" type="Submit">Add salmon and large sea trout (over 1lb)</button>
     </form>
     <br>
     <p class="group">Small sea trout are fish 1lb or less in weight.</p>

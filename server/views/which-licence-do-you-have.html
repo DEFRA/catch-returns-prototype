@@ -1,11 +1,12 @@
 <div class="grid-row">
   <div class="column-two-thirds reducemargin">
-    {{> common/back}} {{> common/errors}}
+    {{> common/back}} 
+    {{> common/errors}}
     <h1 class="heading-large">{{pageTitle}}</h1>
     <form method="post" autocomplete="off" novalidate>
       <fieldset class="inline" data-required data-error="{{errorMessage}}">
-        <legend class="visually-hidden">{{pageTitle}}</legend>
         <div class="form-group">
+          <legend class="visually-hidden">{{pageTitle}}</legend>
           {{#each items}}
           <label for="{{id}}" class="block-label selection-button-radio" {{#if selectedText}}data-target="{{name}}_text" {{/if}}>
             <input id="{{id}}" type="radio" name="{{name}}" value="{{id}}" {{#if checked}}checked{{/if}}>

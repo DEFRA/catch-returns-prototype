@@ -18,36 +18,29 @@
       </thead>
       <tbody>
 
-       
+       <form method="post" autocomplete="off" novalidate>
         {{#each validMonths}} 
           <tr>
           <td>{{month}}</td>
             <td>
-              <input class="gridInput" id="fly" type="text" value="0" maxlength="3" size="7" aria-required="true" name="fly">
+              <input class="gridInput" id="fly" type="number" value="0" maxlength="3" size="7" aria-required="true" name="fly">
             </td>
             <td>
-              <input class="gridInput" id="spinner" type="text" value="0" maxlength="3" size="7" aria-required="true" name="spinner">
+              <input class="gridInput" id="spinner" type="number" value="0" maxlength="3" size="7" aria-required="true" name="spinner">
             </td>
             <td>
-              <input class="gridInput" id="bait" type="text" value="0" maxlength="3" size="7" aria-required="true" name="bait">
+              <input class="gridInput" id="bait" type="number" value="0" maxlength="3" size="7" aria-required="true" name="bait">
             </td>
             <td>
-              <input class="gridInput" id="NumberOfFishReleased" type="text" value="0" maxlength="3" size="7" aria-required="true" name="NumberOfFishReleased">
+              <input class="gridInput" id="NumberOfFishReleased" type="number" value="0" maxlength="3" size="7" aria-required="true" name="NumberOfFishReleased">
             </td>
           </tr>
         {{/each}} 
       </tbody>
     </table>
     <br>
-    <button type="submit" class="button">Add salmon and large sea trout</button>
-    <a href="review" class="button">Save and continue</a> 
-    
-   
-
-
-
-
-
-
+      <button value="SalmonAndLargeSeaTrout" name="next" class="button" type="Submit">Add salmon and large sea trou</button>
+      <button value="Review" name="next" class="button" type="Submit">Save and continue</button>
+    </form>
   </div>
 </div>
