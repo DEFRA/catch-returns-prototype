@@ -2,14 +2,15 @@ const handlers = {
   get: function (request, reply) {
     return reply.view('add-salmon-and-large-sea-trout', {
       //pageTitle: 'Please enter details for the river where you fished',
-      errorMessage: '',
-      errorMessageTwo: '',
-      errorMessageThree: '',
-      errorMessageFour: '',
-      errorMessageFive: '',
+      errorMessage: 'Enter the date of the catch',
+      errorMessageTwo: 'Enter the type of the catch',
+      errorMessageThree: 'Enter the weight of the catch',
+      errorMessageFour: 'Enter the method of capture',
+      errorMessageFive: 'Tell us if the catch was released',
       riverName: request.session.riverName,
+      licencelength: request.session.licencelength,
       rivers: global.rivers,
-      licencelength: request.session.licencelength
+      bigFish: global.bigFish,
     })
   },
   post: function (request, reply) {
@@ -27,15 +28,17 @@ const handlers = {
     request.session.released = request.payload.released
 
     // Save big fish
-    var big = JSON.parse(JSON.stringify(request.session))
-    global.bigFish.push(big)
+   var big = JSON.parse(JSON.stringify(request.session))
+    bigFish.push(big)
 
     if (request.payload.next === "Review") {
       return reply.redirect('review')
+      //return reply(bigFish)
     } else {
       return reply.redirect('add-salmon-and-large-sea-trout')
+      //return reply(rivers)
     }
-    
+
 
   }
 }

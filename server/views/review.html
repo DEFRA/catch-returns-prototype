@@ -51,27 +51,23 @@
       </thead>
       <tbody>
 
-        {{#each smallFish}}
-          {{#isnt total 0}}
-            <tr>
-              <td>{{river}}</td>
-              <td>{{month}}</td>
-              <td>{{total}}</td>
-              <td>{{NumberOfFishReleased}}</td>
-              <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
-            </tr>
-          {{/isnt}}
-        {{/each}}
+        {{#each rivers}}  {{#each littleFish}} {{#isnt total 0}}
+        <tr>
+          <td>{{riverName}}</td>
+          <td>{{month}}</td>
+          <td>{{total}}</td>
+          <td>{{NumberOfFishReleased}}</td>
+          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
+        </tr>
+        {{/isnt}} {{/each}} {{/each}}
 
       </tbody>
     </table>
     <br>
     <p>
       {{#isnt riverCount 1}}
-      <a href="select-river-sea-trout" class="button">Add small sea trout</a>
-      {{else}}
-      <a href="add-small-sea-trout" class="button">Add small sea trout</a>
-      {{/isnt}}
+      <a href="select-river-sea-trout" class="button">Add small sea trout</a> {{else}}
+      <a href="add-small-sea-trout" class="button">Add small sea trout</a> {{/isnt}}
     </p>
     <h3 class="heading-small">Salmon and large sea trout</h3>
     <table class="largeFishReview" style="width: 90%">
@@ -87,10 +83,12 @@
         </tr>
       </thead>
       <tbody>
-
+    
+       
+       
         {{#each bigFish}}
         <tr>
-          <td>{{river}}</td>
+          <td>{{riverName}}</td>
           <td>{{date}}</td>
           <td>{{typeOfFish}}</td>
           <td>{{weight}}</td>
@@ -98,17 +96,15 @@
           <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
           <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
         </tr>
-        {{/each}}
+        {{/each}} 
 
       </tbody>
     </table>
     <br>
     <p>
       {{#isnt riverCount 1}}
-      <a href="select-river-salmon" class="button">Add salmon and large sea trout</a>
-      {{else}}
-      <a href="add-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout</a>
-      {{/isnt}}
+      <a href="select-river-salmon" class="button">Add salmon and large sea trout</a> {{else}}
+      <a href="add-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout</a> {{/isnt}}
     </p>
 
     <p class="group">If you expect to fish again this season and your current licence is still valid please click the 'Exit and continue catch

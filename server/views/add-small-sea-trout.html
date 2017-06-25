@@ -1,11 +1,14 @@
 <div class="grid-row">
   <div class="column-full reducemargin">
-    {{> common/back}} {{> common/errors}} 
-    
-    
+    {{> common/back}} {{> common/errors}}
+
+
     <h1 class="heading-large">Small sea trout caught for river {{riverName}}</h1>
     <p>For each month, click on the numbers to enter small sea trout caught and released. For nil catches click the Save button.
     </p>
+
+
+
     <table class="smallSeaTroutInput" style="width: 90%">
       <thead>
         <tr>
@@ -19,7 +22,7 @@
       <tbody>
 
        <form method="post" autocomplete="off" novalidate>
-        {{#each smallFish}} 
+        {{#each validMonths}}
           <tr>
           <td><input class="gridInput" id="month" type="text" value="{{month}}" name="month" readonly></td>
             <td>
@@ -35,7 +38,7 @@
               <input class="gridInput" id="NumberOfFishReleased" type="number" value="{{NumberOfFishReleased}}" name="NumberOfFishReleased">
             </td>
           </tr>
-        {{/each}} 
+        {{/each}}
       </tbody>
     </table>
     <br>

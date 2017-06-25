@@ -55,7 +55,7 @@
               <option value="1" selected="selected">January</option>
               <option value="2" selected="selected">February</option>
               <option value="3" selected="selected">March</option>
-              <option value="4" selected="selected">Aprill</option>
+              <option value="4" selected="selected">April</option>
               <option value="5" selected="selected">May</option>
               <option value="6" selected="selected">June</option>
               <option value="7" selected="selected">July</option>
@@ -69,8 +69,8 @@
           <div class="form-group form-group-year">
             <label class="form-label year" for="year">Year</label>
             <select class="form-control" id="year" aria-required="true" name="year">
-              <option value="2017" selected="selected">2017</option>	
-              <option value="2018" selected="selected">2018</option>						
+              <option value="2017" selected="selected">2017</option>
+              <option value="2018" selected="selected">2018</option>
             </select>
           </div>
           {{else}}
@@ -91,59 +91,48 @@
           <div class="form-group form-group-month">
             <label class="form-label month" for="month">Month</label>
             <select class="form-control" id="month" type="text" aria-required="true" name="month">
-              <option value="4" selected="selected">Aprill</option>
+              <option value="4" selected="selected">April</option>
             </select>
           </div>
           <div class="form-group form-group-year">
             <label class="form-label year" for="year">Year</label>
             <select class="form-control" id="year" aria-required="true" name="year">
-              <option value="2017" selected="selected">2017</option>	
+              <option value="2017" selected="selected">2017</option>
             </select>
           </div>
           {{/if}}
-
-
-
-
-
-
-
-
-
         </div>
       </fieldset>
 
-      <fieldset data-required data-error="{{errorMessage}}">
-        <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river</legend>
+      <fieldset data-required data-error="{{errorMessageTwo}}">
         <div class="form-group">
           <h3 class="heading-small">Type of catch</h3>
           <label for="salmonAndGrilse" class="block-label selection-button-radio">Salmon and Grilse
-                  <input id="salmonAndGrilse" type="radio" name="fishType" value="Salmon and Grilse">
-                </label>
+            <input id="salmonAndGrilse" type="radio" name="fishType" value="Salmon and Grilse">
+          </label>
           <label for="SeaTrout" class="block-label selection-button-radio">Sea Trout
-                  <input id="SeaTrout" type="radio" name="fishType" value="Sea Trout">
-                </label>
+            <input id="SeaTrout" type="radio" name="fishType" value="Sea Trout">
+          </label>
         </div>
       </fieldset>
 
-      <fieldset data-required data-error="{{errorMessage}}">
+      <fieldset data-required data-error="{{errorMessageThree}}">
         <div class="form-group">
           <h3 class="heading-small">Weight of catch</h3>
-
-          <div class="form-group form-group-day">
+          <div class="form-group-day">
             <label class="form-label day" for="lb">lb</label>
             <input class="form-control" id="lb" name="lb" type="number">
           </div>
-          <div class="form-group form-group-month">
+          <div class="form-group-month">
             <label class="form-label month" for="oz">oz</label>
             <input class="form-control" id="oz" name="oz" type="number">
           </div>
-          <!--<button class="button button-secondary">Convert to metric</button>-->
+          <!-- <button class="button button-secondary">Convert to metric</button> -->
         </div>
       </fieldset>
 
 
-      <fieldset data-required data-error="{{errorMessage}}">
+      <fieldset data-required data-error="{{errorMessageFour}}">
         <div class="form-group">
           <h3 class="heading-small">Method of capture</h3>
           <label for="methodFly" class="block-label selection-button-radio">Fly
@@ -157,7 +146,7 @@
                 </label>
         </div>
       </fieldset>
-      <fieldset data-required data-error="{{errorMessage}}">
+      <fieldset data-required data-error="{{errorMessageFive}}">
         <div class="form-group">
           <h3 class="heading-small">Released</h3>
           <label for="Yes" class="block-label selection-button-radio">Yes
