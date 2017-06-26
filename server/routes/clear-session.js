@@ -4,7 +4,8 @@ const handlers = {
     // Cear session
     request.session = {}
     // Cear saved users
-    global.users = []
+    global.rivers = []
+    global.validMonths = []
     return reply.redirect('/')
 
 

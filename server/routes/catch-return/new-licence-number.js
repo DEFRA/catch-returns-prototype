@@ -17,25 +17,53 @@ const handlers = {
       request.session.endText = '10 April 2017'
       request.session.licencelength = false
 
-      // Rivers
-      global.rivers = []
+    global.rivers = {
+      Thames: {
+        riverName: 'Thames',
+        riverTown: 'London',
+        riverDaysBeforeJune: 4,
+        riverDaysAfterJune: 3,
+        bigFish: [
+          { riverName: 'Thames', date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+          { riverName: 'Thames', date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
+          { riverName: 'Thames', date: "3/03/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'No', },
+          { riverName: 'Thames', date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
+          { riverName: 'Thames', date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+        ],
+        smallFish: [
+          { riverName: 'Thames', month: 'June 17', fly: 2, spinner: 2, bait: 2, total: 6, NumberOfFishReleased: 4, },
+          { riverName: 'Thames', month: 'July 17', fly: 3, spinner: 1, bait: 4, total: 8, NumberOfFishReleased: 6, }
+        ]
+      },
+       Avon: {
+        riverName: 'Avon',
+        riverTown: 'Warrington',
+        riverDaysBeforeJune: 12,
+        riverDaysAfterJune: 13,
+        bigFish: [
+          { riverName: 'Avon', date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+          { riverName: 'Avon', date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
+          { riverName: 'Avon', date: "3/03/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'No', },
+          { riverName: 'Avon', date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
+          { riverName: 'Avon', date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+        ],
+        smallFish: [
+          { riverName: 'Avon', month: 'June 17', fly: 2, spinner: 2, bait: 2, total: 6, NumberOfFishReleased: 4, },
+          { riverName: 'Avon', month: 'July 17', fly: 3, spinner: 1, bait: 4, total: 8, NumberOfFishReleased: 6, }
+        ]
+      },
+    }
 
-      // valid months
+    // valid months
       global.validMonths = [
-        { month: 'June 17' },
-        { month: 'July 17' }
+        { month: 'June 17' ,fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+        { month: 'July 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,}
       ]
 
-      // Small fish
-      global.smallFish = [
-        { river: "Thames", month: "June 17", fly: 1, spinner: 2, bait: 0, total: 3, NumberOfFishReleased: 0, },
-        { river: "Thames", month: "July 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
-      ]
 
-      // Big Fish
-      global.bigFish = [
+      
 
-      ]
+      
 
       return reply.redirect('have-you-fished')
 
@@ -45,17 +73,16 @@ const handlers = {
       request.session.endText = '3 June 2018'
       request.session.licencelength = true
 
-      // Rivers
-      global.rivers = []
+      //global.rivers = []
 
       // valid months
-      global.validMonths = [
-        { month: 'June 17' },
-        { month: 'July 17' }
-      ]
+      // global.validMonths = [
+      //   { month: 'June 17' ,fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'July 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,}
+      // ]
 
       // Small fish
-      global.smallFish = [
+      //global.smallFish = [
 
         // {
         //   riverName: 'Thames' {
@@ -75,12 +102,12 @@ const handlers = {
         //     },
         //   }
         // },
-      ]
+      //]
 
       // Big Fish
-      global.bigFish = [
+      // global.bigFish = [
 
-      ]
+      // ]
 
       return reply.redirect('have-you-fished')
 
@@ -94,48 +121,48 @@ const handlers = {
       request.session.licencelength = true
 
       // Rivers
-      global.rivers = [
-        {
-          riverName: 'Thames',
-          riverTown: 'London',
-          riverDaysBeforeJune: 4,
-          riverDaysAfterJune: 3,
-        },
-        {
-          riverName: 'Weaver',
-          riverTown: 'Northwich',
-          riverDaysBeforeJune: 0,
-          riverDaysAfterJune: 5,
-        },
-        {
-          riverName: 'Avon',
-          riverTown: 'Stratford',
-          riverDaysBeforeJune: 2,
-          riverDaysAfterJune: 3,
-        }
-      ]
+      // global.rivers = [
+      //   {
+      //     riverName: 'Thames',
+      //     riverTown: 'London',
+      //     riverDaysBeforeJune: 4,
+      //     riverDaysAfterJune: 3,
+      //   },
+      //   {
+      //     riverName: 'Weaver',
+      //     riverTown: 'Northwich',
+      //     riverDaysBeforeJune: 0,
+      //     riverDaysAfterJune: 5,
+      //   },
+      //   {
+      //     riverName: 'Avon',
+      //     riverTown: 'Stratford',
+      //     riverDaysBeforeJune: 2,
+      //     riverDaysAfterJune: 3,
+      //   }
+      // ]
 
       // valid months
-      global.validMonths = [
-        { month: 'June 16' },
-        { month: 'July 16' },
-        { month: 'Augaust 16' },
-        { month: 'Septembe 16' },
-        { month: 'October 16' },
-        { month: 'November 16' },
-        { month: 'December 16' },
-        { month: 'January 17' },
-        { month: 'February 17' },
-        { month: 'March 17' },
-        { month: 'April 17' },
-        { month: 'May 17' },
-        { month: 'June 17' },
-      ]
+      // global.validMonths = [
+      //   { month: 'June 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'July 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'Augaust 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'Septembe 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'October 16' ,fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'November 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'December 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'January 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'February 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'March 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'April 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'May 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      //   { month: 'June 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+      // ]
 
       //Small fish
-      global.smallFish = [
-        { river: "Thames", month: "June 16", fly: 3, spinner: 0, bait: 2, total: 5, NumberOfFishReleased: 5, },
-        { river: "Thames", month: "July 16", fly: 1, spinner: 0, bait: 2, total: 3, NumberOfFishReleased: 5, },
+      //global.smallFish = [
+        //{ river: "Thames", month: "June 16", fly: 3, spinner: 0, bait: 2, total: 5, NumberOfFishReleased: 5, },
+        //{ river: "Thames", month: "July 16", fly: 1, spinner: 0, bait: 2, total: 3, NumberOfFishReleased: 5, },
         // { river: "Thames", month: "Augaust 16", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
         // { river: "Thames", month: "Septembe 16", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
         // { river: "Thames", month: "October 16", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
@@ -150,8 +177,8 @@ const handlers = {
 
         // { river: "Avon", month: "June 16", fly: 3, spinner: 0, bait: 2, total: 5, NumberOfFishReleased: 5, },
         // { river: "Avon", month: "July 16", fly: 1, spinner: 0, bait: 2, total: 3, NumberOfFishReleased: 5, },
-        { river: "Avon", month: "Augaust 16", fly: 3, spinner: 2, bait: 1, total: 6, NumberOfFishReleased: 3, },
-        { river: "Avon", month: "Septembe 16", fly: 1, spinner: 4, bait: 0, total: 6, NumberOfFishReleased: 2, },
+        //{ river: "Avon", month: "Augaust 16", fly: 3, spinner: 2, bait: 1, total: 6, NumberOfFishReleased: 3, },
+        //{ river: "Avon", month: "Septembe 16", fly: 1, spinner: 4, bait: 0, total: 6, NumberOfFishReleased: 2, },
         // { river: "Avon", month: "October 16", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
         // { river: "Avon", month: "November 16", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
         // { river: "Avon", month: "December 16", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
@@ -161,16 +188,16 @@ const handlers = {
         // { river: "Avon", month: "April 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
         // { river: "Avon", month: "May 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
         // { river: "Avon", month: "June 17", fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
-      ]
+      //]
 
       // Big Fish
-      global.bigFish = [
-        { river: "Avon", date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
-        { river: "Avon", date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
-        { river: "Weaver", date: "3/03/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'No', },
-        { river: "Weaver", date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
-        { river: "Thames", date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
-      ]
+      // global.bigFish = [
+      //   { river: "Avon", date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+      //   { river: "Avon", date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
+      //   { river: "Weaver", date: "3/03/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'No', },
+      //   { river: "Weaver", date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
+      //   { river: "Thames", date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+      // ]
 
       return reply.redirect('review')
     }

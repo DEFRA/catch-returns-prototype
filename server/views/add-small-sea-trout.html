@@ -2,13 +2,9 @@
   <div class="column-full reducemargin">
     {{> common/back}} {{> common/errors}}
 
-
-    <h1 class="heading-large">Small sea trout caught for river {{riverName}}</h1>
+    <h1 class="heading-large">Small sea trout caught for river {{currentRiver}}</h1>
     <p>For each month, click on the numbers to enter small sea trout caught and released. For nil catches click the Save button.
     </p>
-
-
-
     <table class="smallSeaTroutInput" style="width: 90%">
       <thead>
         <tr>
@@ -20,30 +16,30 @@
         </tr>
       </thead>
       <tbody>
-
-       <form method="post" autocomplete="off" novalidate>
-        {{#each validMonths}}
+        <form method="post" autocomplete="off" novalidate>
+          {{#each littleFish}} 
           <tr>
-          <td><input class="gridInput" id="month" type="text" value="{{month}}" name="month" readonly></td>
             <td>
-              <input class="gridInput" id="fly" type="number" value="{{fly}}" name="fly">
+              <input id="month" type="text" value="{{month}}" name="month{{@index}}" readonly></td>
+            <td>
+              <input id="fly" type="number" value="{{fly}}" name="fly{{@index}}">
             </td>
             <td>
-              <input class="gridInput" id="spinner" type="number" value="{{spinner}}" name="spinner">
+              <input id="spinner" type="number" value="{{spinner}}" name="spinner{{@index}}">
             </td>
             <td>
-              <input class="gridInput" id="bait" type="number" value="{{bait}}" name="bait">
+              <input id="bait" type="number" value="{{bait}}" name="bait{{@index}}">
             </td>
             <td>
-              <input class="gridInput" id="NumberOfFishReleased" type="number" value="{{NumberOfFishReleased}}" name="NumberOfFishReleased">
+              <input id="NumberOfFishReleased" type="number" value="{{NumberOfFishReleased}}" name="NumberOfFishReleased{{@index}}">
             </td>
           </tr>
-        {{/each}}
+          {{/each}} 
       </tbody>
     </table>
     <br>
-      <button value="SalmonAndLargeSeaTrout" name="next" class="button" type="Submit">Add salmon and large sea trou</button>
-      <button value="Review" name="next" class="button" type="Submit">Save and continue</button>
+    <button value="SalmonAndLargeSeaTrout" name="next" class="button" type="Submit">Add salmon and large sea trou</button>
+    <button value="Review" name="next" class="button" type="Submit">Save and continue</button>
     </form>
   </div>
 </div>

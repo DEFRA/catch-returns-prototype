@@ -10,11 +10,10 @@ const handlers = {
       riverName: request.session.riverName,
       licencelength: request.session.licencelength,
       rivers: global.rivers,
-      bigFish: global.bigFish,
+      validMonths: global.validMonths
     })
   },
   post: function (request, reply) {
-    request.session.river = request.session.riverName
     request.session.day = request.payload.day
     request.session.month = request.payload.month
     request.session.year = request.payload.year
@@ -28,12 +27,25 @@ const handlers = {
     request.session.released = request.payload.released
 
     // Save big fish
-   var big = JSON.parse(JSON.stringify(request.session))
-    bigFish.push(big)
+    var big = {
+      riverName: request.session.riverName,
+      date: request.session.date,
+      bait: request.payload.bait,
+      typeOfFish: request.session.typeOfFish,
+      weight: request.session.weight,
+      MethodOfCapture: request.session.MethodOfCapture,
+      released: request.session.released
+    }
+    
+    global.rivers[request.session.riverName].bigFish.push(big)
+
+
+
+
 
     if (request.payload.next === "Review") {
-      return reply.redirect('review')
-      //return reply(bigFish)
+      //return reply.redirect('review')
+    return reply(rivers)
     } else {
       return reply.redirect('add-salmon-and-large-sea-trout')
       //return reply(rivers)
