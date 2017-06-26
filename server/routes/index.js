@@ -20,5 +20,9 @@ module.exports = [].concat(
   require('./catch-return/add-salmon-and-large-sea-trout'),
   require('./catch-return/thank-you'),
   require('./catch-return/review'),
-  require('./catch-return/thank-you-email')
+  require('./catch-return/thank-you-email'),
+  require('./catch-return/delete-river'),
+  require('./catch-return/delete-bigFish'),
+  require('./catch-return/edit-river'),
+  require('./catch-return/edit-bigFish')
 )

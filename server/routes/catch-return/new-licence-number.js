@@ -26,9 +26,6 @@ const handlers = {
         bigFish: [
           { riverName: 'Thames', date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
           { riverName: 'Thames', date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
-          { riverName: 'Thames', date: "3/03/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'No', },
-          { riverName: 'Thames', date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
-          { riverName: 'Thames', date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
         ],
         smallFish: [
           { riverName: 'Thames', month: 'June 17', fly: 2, spinner: 2, bait: 2, total: 6, NumberOfFishReleased: 4, },
@@ -41,9 +38,6 @@ const handlers = {
         riverDaysBeforeJune: 12,
         riverDaysAfterJune: 13,
         bigFish: [
-          { riverName: 'Avon', date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
-          { riverName: 'Avon', date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
-          { riverName: 'Avon', date: "3/03/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'No', },
           { riverName: 'Avon', date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
           { riverName: 'Avon', date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
         ],
@@ -56,7 +50,7 @@ const handlers = {
 
     // valid months
       global.validMonths = [
-        { month: 'June 17' ,fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
+        { month: 'June 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,},
         { month: 'July 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0,}
       ]
 

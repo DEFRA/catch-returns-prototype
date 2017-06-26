@@ -24,8 +24,8 @@
           <td>{{riverTown}}</td>
           <td>{{riverDaysBeforeJune}}</td>
           <td>{{riverDaysAfterJune}}</td>
-          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
-          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
+          <td><a href="edit-river?editUrl={{@key}}">Edit</a></td>
+          <td><a href="delete-river?deleteUrl={{@key}}">Delete</a></td>
         </tr>
         {{/each}}
 
@@ -55,7 +55,7 @@
           <td>{{month}}</td>
           <td>{{total}}</td>
           <td>{{NumberOfFishReleased}}</td>
-          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
+          <td><a href="add-small-sea-trout">Edit</a></td>
         </tr>
         {{/isnt}} {{/each}} {{/each}}
 
@@ -90,8 +90,8 @@
           <td>{{typeOfFish}}</td>
           <td>{{weight}}</td>
           <td>{{released}}</td>
-          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=editRiver&amp;riverName=Alwen">Edit</a></td>
-          <td><a href="/rcr/enterlicencedetails?execution=e1s5&amp;_eventId=deleteRiver&amp;riverName=Alwen">Delete</a></td>
+          <td><a href="edit-bigFish?editUrl={{riverName}}.bigFish[{{@key}}]">Edit</a></td>
+          <td><a href="delete-bigFish?deleteUrl={{riverName}}.bigFish[{{@key}}]">Delete</a></td>
         </tr>
         {{/each}} {{/each}}
 
