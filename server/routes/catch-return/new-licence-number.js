@@ -24,12 +24,12 @@ const handlers = {
         riverDaysBeforeJune: 4,
         riverDaysAfterJune: 3,
         bigFish: [
-          { riverName: 'Thames', date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
-          { riverName: 'Thames', date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
+          { date: "23/01/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+          { date: "16/02/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'No' },
         ],
         smallFish: [
-          { riverName: 'Thames', month: 'June 17', fly: 2, spinner: 2, bait: 2, total: 6, NumberOfFishReleased: 4, },
-          { riverName: 'Thames', month: 'July 17', fly: 3, spinner: 1, bait: 4, total: 8, NumberOfFishReleased: 6, }
+          { month: 'June 17', fly: 2, spinner: 2, bait: 2, total: 6, NumberOfFishReleased: 4, },
+          { month: 'July 17', fly: 3, spinner: 1, bait: 4, total: 8, NumberOfFishReleased: 6, }
         ]
       },
        Avon: {
@@ -38,12 +38,12 @@ const handlers = {
         riverDaysBeforeJune: 12,
         riverDaysAfterJune: 13,
         bigFish: [
-          { riverName: 'Avon', date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
-          { riverName: 'Avon', date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
+          {date: "15/14/2017", typeOfFish: 'Sea trout', weight: '4lb 4oz', method: 'spinner', released: 'yes', },
+          {date: "30/04/2017", typeOfFish: 'Salmon and grilse', weight: '2lb 2oz', method: 'fly', released: 'yes', },
         ],
         smallFish: [
-          { riverName: 'Avon', month: 'June 17', fly: 2, spinner: 2, bait: 2, total: 6, NumberOfFishReleased: 4, },
-          { riverName: 'Avon', month: 'July 17', fly: 3, spinner: 1, bait: 4, total: 8, NumberOfFishReleased: 6, }
+          {month: 'June 17', fly: 2, spinner: 2, bait: 2, total: 6, NumberOfFishReleased: 4, },
+          {month: 'July 17', fly: 3, spinner: 1, bait: 4, total: 8, NumberOfFishReleased: 6, }
         ]
       },
     }

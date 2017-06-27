@@ -37,7 +37,7 @@ const handlers = {
     for (var i = 0; i < 2; i += 1) {
       global.rivers[request.session.riverName].smallFish =
         {
-          riverName: request.session.riverName,
+          //riverName: request.session.riverName,
           month: request.session.month,
           fly: request.session.fly,
           spinner: request.payload.spinner,

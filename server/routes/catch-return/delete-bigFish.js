@@ -5,17 +5,13 @@ const handlers = {
     })
   },
   post: function (request, reply) {
-    
-    // ?riverUrl=Thames%20?fishUrl=0,
-    
+
     if (request.payload.next === "Yes") {
-      //delete global.rivers.Thames.bigFish[0];
-      delete global.rivers[request.query.riverUrl].bigFish[request.query.fishUrl];
+      delete global.rivers[request.query.a].bigFish[Number(request.query.b)];
       return reply.redirect('review')
     } else {
       return reply.redirect('review')
     }
-
 
   }
 }

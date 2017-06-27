@@ -2,15 +2,12 @@ const handlers = {
   get: function (request, reply) {
     return reply.view('edit-bigFish', {
       //pageTitle: 'Please enter details for the river where you fished',
-      errorMessage: 'Enter the date of the catch',
-      errorMessageTwo: 'Enter the type of the catch',
-      errorMessageThree: 'Enter the weight of the catch',
-      errorMessageFour: 'Enter the method of capture',
-      errorMessageFive: 'Tell us if the catch was released',
+      //errorMessage: 'Enter the date of the catch',
       riverName: request.session.riverName,
       licencelength: request.session.licencelength,
       rivers: global.rivers,
-      validMonths: global.validMonths
+      validMonths: global.validMonths,
+      currentFish: global.rivers[request.query.a].bigFish[Number(request.query.b)],
     })
   },
   post: function (request, reply) {
@@ -27,30 +24,31 @@ const handlers = {
     request.session.released = request.payload.released
 
     // Save big fish
-    var big = {
-      riverName: request.session.riverName,
-      date: request.session.date,
-      bait: request.payload.bait,
-      typeOfFish: request.session.typeOfFish,
-      weight: request.session.weight,
-      MethodOfCapture: request.session.MethodOfCapture,
-      released: request.session.released
-    }
+    // var big = {
+    //   riverName: request.session.riverName,
+    //   date: request.session.date,
+    //   bait: request.payload.bait,
+    //   typeOfFish: request.session.typeOfFish,
+    //   weight: request.session.weight,
+    //   MethodOfCapture: request.session.MethodOfCapture,
+    //   released: request.session.released
+    // }
     
-    global.rivers[request.session.riverName].bigFish.push(big)
+    // global.rivers[request.session.riverName].bigFish.push(big)
 
 
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].riverName = request.session.riverName
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].date = request.session.date
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].bait = request.session.bait
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].typeOfFish = request.session.typeOfFish
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].weight = request.session.weight
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].MethodOfCapture = request.session.MethodOfCapture
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].released = request.session.released
 
 
-
-    if (request.payload.next === "Review") {
-      return reply.redirect('review')
-    //return reply(rivers)
-    } else {
-      return reply.redirect('add-salmon-and-large-sea-trout')
-      //return reply(rivers)
-    }
-
+    
+    return reply.redirect('review')
+   
 
   }
 }

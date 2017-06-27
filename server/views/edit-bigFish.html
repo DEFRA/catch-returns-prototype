@@ -15,7 +15,8 @@
           <div class="form-group form-group-day">
             <label class="form-label day" for="day">Day</label>
             <select class="form-control" id="day" aria-required="true" name="day">
-                <option value="-1" selected="selected">Day</option>
+                <!--<option value="-1" selected="selected">Day</option>-->
+                <option value="currentFish.day" selected="selected">{{currentFish.day}}</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -52,6 +53,7 @@
           <div class="form-group form-group-month">
             <label class="form-label month" for="month">Month</label>
             <select class="form-control" id="month" type="text" aria-required="true" name="month">
+              <option value="currentFish.month" selected="selected">{{currentFish.month}}</option>
               <option value="1" selected="selected">January</option>
               <option value="2" selected="selected">February</option>
               <option value="3" selected="selected">March</option>
@@ -69,6 +71,7 @@
           <div class="form-group form-group-year">
             <label class="form-label year" for="year">Year</label>
             <select class="form-control" id="year" aria-required="true" name="year">
+              <option value="currentFish.year" selected="selected">{{currentFish.year}}</option>
               <option value="2017" selected="selected">2017</option>
               <option value="2018" selected="selected">2018</option>
             </select>
@@ -78,6 +81,7 @@
             <label class="form-label day" for="day">Day</label>
             <select class="form-control" id="day" aria-required="true" name="day">
                 <option value="-1" selected="selected">Day</option>
+                <option value="currentFish.day" selected="selected">{{currentFish.day}}</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -91,12 +95,14 @@
           <div class="form-group form-group-month">
             <label class="form-label month" for="month">Month</label>
             <select class="form-control" id="month" type="text" aria-required="true" name="month">
+              <option value="currentFish.month" selected="selected">{{currentFish.month}}</option>
               <option value="4" selected="selected">April</option>
             </select>
           </div>
           <div class="form-group form-group-year">
             <label class="form-label year" for="year">Year</label>
             <select class="form-control" id="year" aria-required="true" name="year">
+              <option value="currentFish.year" selected="selected">{{currentFish.year}}</option>
               <option value="2017" selected="selected">2017</option>
             </select>
           </div>
@@ -121,11 +127,11 @@
           <h3 class="heading-small">Weight of catch</h3>
           <div class="form-group-day">
             <label class="form-label day" for="lb">lb</label>
-            <input class="form-control" id="lb" name="lb" type="number">
+            <input class="form-control" id="lb" name="lb" type="number" value="{{currentFish.lb}}">
           </div>
           <div class="form-group-month">
             <label class="form-label month" for="oz">oz</label>
-            <input class="form-control" id="oz" name="oz" type="number">
+            <input class="form-control" id="oz" name="oz" type="number" value="{{currentFish.oz}}">
           </div>
           <!-- <button class="button button-secondary">Convert to metric</button> -->
         </div>
@@ -157,8 +163,7 @@
                 </label>
         </div>
       </fieldset>
-      <button value="SalmonAndLargeSeaTrout" name="next" class="button" type="Submit">Save and add another</button>
-      <button value="Review" name="next" class="button" type="Submit">Save and continue</button>
+      <button value="SalmonAndLargeSeaTrout" name="next" class="button" type="Submit">Save</button>
       <a href="review" class="button button-secondary">Cancel</a>
     </form>
 

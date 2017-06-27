@@ -90,8 +90,8 @@
           <td>{{typeOfFish}}</td>
           <td>{{weight}}</td>
           <td>{{released}}</td>
-          <td><a href="edit-bigFish?editUrl={{riverName}} bigFish[{{@key}}]">Edit</a></td>
-          <td><a href="delete-bigFish?riverUrl={{riverName}} ?fishUrl=[{{@key}}]">Delete</a></td>
+          <td><a href="edit-bigFish?a={{../riverName}}&b={{@key}}">Edit</a></td>
+          <td><a href="delete-bigFish?a={{../riverName}}&b={{@key}}">Delete</a></td>
         </tr>
         {{/each}} {{/each}}
 

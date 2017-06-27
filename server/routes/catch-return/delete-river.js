@@ -1,8 +1,7 @@
 const handlers = {
   get: function (request, reply) {
     return reply.view('delete-river', {
-      pageTitle: 'Are you sure you want to delete this river?',
-     
+      pageTitle: 'Are you sure you want to delete this river?',   
     })
   },
   post: function (request, reply) {

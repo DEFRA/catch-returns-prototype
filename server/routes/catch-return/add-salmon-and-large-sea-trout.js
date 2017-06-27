@@ -28,7 +28,7 @@ const handlers = {
 
     // Save big fish
     var big = {
-      riverName: request.session.riverName,
+      //riverName: request.session.riverName,
       date: request.session.date,
       bait: request.payload.bait,
       typeOfFish: request.session.typeOfFish,

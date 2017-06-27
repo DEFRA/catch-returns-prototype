@@ -19,20 +19,9 @@ const handlers = {
     global.rivers[request.query.editUrl].riverDaysBeforeJune = request.session.riverDaysBeforeJune
     global.rivers[request.query.editUrl].riverDaysAfterJune = request.session.riverDaysAfterJune
 
-    // Edit river for small and big fish
-    global.rivers[request.query.editUrl].bigFish.riverName = request.session.riverName
-    global.rivers[request.query.editUrl].smallFish.riverName = request.session.riverName
 
-
-
-    if (request.payload.next === "Review") {
-      return reply.redirect('review')
-      //return reply(rivers)
-    } else if (request.payload.next === "SmallSeaTrout") {
-      return reply.redirect('add-small-sea-trout')
-    } else {
-      return reply.redirect('add-salmon-and-large-sea-trout')
-    }
+    return reply.redirect('review')
+    //return reply(rivers)
 
   }
 }
