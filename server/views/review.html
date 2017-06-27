@@ -51,7 +51,7 @@
 
         {{#each rivers}} {{#each smallFish}} {{#isnt total 0}}
         <tr>
-          <td>{{riverName}}</td>
+          <td>{{../riverName}}</td>
           <td>{{month}}</td>
           <td>{{total}}</td>
           <td>{{NumberOfFishReleased}}</td>
@@ -85,13 +85,13 @@
 
         {{#each rivers}} {{#each bigFish}}
         <tr>
-          <td>{{riverName}}</td>
+          <td>{{../riverName}}</td>
           <td>{{date}}</td>
           <td>{{typeOfFish}}</td>
           <td>{{weight}}</td>
           <td>{{released}}</td>
-          <td><a href="edit-bigFish?editUrl={{riverName}}.bigFish[{{@key}}]">Edit</a></td>
-          <td><a href="delete-bigFish?deleteUrl={{riverName}}.bigFish[{{@key}}]">Delete</a></td>
+          <td><a href="edit-bigFish?editUrl={{riverName}} bigFish[{{@key}}]">Edit</a></td>
+          <td><a href="delete-bigFish?riverUrl={{riverName}} ?fishUrl=[{{@key}}]">Delete</a></td>
         </tr>
         {{/each}} {{/each}}
 

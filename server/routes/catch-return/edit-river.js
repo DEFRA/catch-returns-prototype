@@ -14,9 +14,14 @@ const handlers = {
     request.session.riverDaysAfterJune = request.payload.riverDaysAfterJune
 
     // Edit river
+    global.rivers[request.query.editUrl].riverName = request.session.riverName
     global.rivers[request.query.editUrl].riverTown = request.session.riverTown
     global.rivers[request.query.editUrl].riverDaysBeforeJune = request.session.riverDaysBeforeJune
     global.rivers[request.query.editUrl].riverDaysAfterJune = request.session.riverDaysAfterJune
+
+    // Edit river for small and big fish
+    global.rivers[request.query.editUrl].bigFish.riverName = request.session.riverName
+    global.rivers[request.query.editUrl].smallFish.riverName = request.session.riverName
 
 
 
