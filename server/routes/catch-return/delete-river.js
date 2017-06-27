@@ -6,6 +6,7 @@ const handlers = {
   },
   post: function (request, reply) {
     if (request.payload.next === "Yes") {
+      riversCount -= 1;
       delete global.rivers[request.query.deleteUrl];
       return reply.redirect('review')
     } else {

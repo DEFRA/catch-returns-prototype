@@ -1,5 +1,10 @@
 const handlers = {
   get: function (request, reply) {
+
+    if (global.rivers[request.query.a].bigFish[Number(request.query.b)].released === request.payload.released) {
+       var checked = true;
+      }
+
     return reply.view('edit-bigFish', {
       //pageTitle: 'Please enter details for the river where you fished',
       //errorMessage: 'Enter the date of the catch',
@@ -8,8 +13,9 @@ const handlers = {
       rivers: global.rivers,
       validMonths: global.validMonths,
       currentFish: global.rivers[request.query.a].bigFish[Number(request.query.b)],
-      currentRiver: request.query.a
+      currentRiver: request.query.a,      
     })
+     
   },
   post: function (request, reply) {
     request.session.day = request.payload.day

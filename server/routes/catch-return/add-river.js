@@ -60,13 +60,14 @@ const handlers = {
       }
     }
 
+    riversCount += 1;
 
     if (request.payload.next === "Review") {
       return reply.redirect('review')
       //return reply(rivers)
     } else if (request.payload.next === "SmallSeaTrout") {
-      //return reply.redirect('add-small-sea-trout')
-      return reply(rivers)
+      return reply.redirect('add-small-sea-trout')
+      //return reply(rivers)
     } else {
       return reply.redirect('add-salmon-and-large-sea-trout')
     }

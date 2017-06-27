@@ -8,7 +8,7 @@ const handlers = {
       smallFish: global.rivers.smallFish,
       bigFish: global.rivers.bigFish,
       river: request.session.riverName,
-      riverCount: ""
+      riversCounted: riversCount,
     })
 
 

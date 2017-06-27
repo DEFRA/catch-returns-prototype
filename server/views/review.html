@@ -4,7 +4,6 @@
     <h1 class="heading-large">{{pageTitle}}</h1>
 
     <h3 class="heading-small">Rivers fished</h3>
-
     <table class="riversFishedReview" style="width: 90%">
       <thead>
         <tr>
@@ -63,7 +62,7 @@
     </table>
     <br>
     <p>
-      {{#isnt riverCount 1}} 
+      {{#isnt riversCounted 1}}
       <a href="select-river-sea-trout" class="button">Add small sea trout</a> {{else}}
       <a href="add-small-sea-trout" class="button">Add small sea trout</a> {{/isnt}}
     </p>
@@ -99,7 +98,7 @@
     </table>
     <br>
     <p>
-      {{#isnt riverCount 1}}
+      {{#isnt riversCounted 1}}
       <a href="select-river-salmon" class="button">Add salmon and large sea trout</a> {{else}}
       <a href="add-salmon-and-large-sea-trout" class="button">Add salmon and large sea trout</a> {{/isnt}}
     </p>
