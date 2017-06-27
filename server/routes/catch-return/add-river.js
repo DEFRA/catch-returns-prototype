@@ -7,8 +7,11 @@ const handlers = {
       errorMessageThree: 'Enter the number of days you fished before 16th June',
       errorMessageFour: 'Enter the number of days you fished after 16th June',
       rivers: global.rivers,
-      validMonths: global.validMonths
-    })
+      validMonths: global.validMonths,
+    }),
+    
+    request.session.riverName = ""
+
   },
   post: function (request, reply) {
     request.session.riverName = request.payload.riverName

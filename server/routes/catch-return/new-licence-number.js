@@ -12,7 +12,6 @@ const handlers = {
 
 
     if (request.session.licenceNumber === 'C7A711') {
-      request.session.licenceNumber = '00010418-3WC3JDS-C7A711'
       request.session.startText = '2 April 2017'
       request.session.endText = '10 April 2017'
       request.session.licencelength = false
@@ -62,7 +61,6 @@ const handlers = {
       return reply.redirect('have-you-fished')
 
     } else if (request.session.licenceNumber === 'C7A722') {
-      request.session.licenceNumber = '00010418-3WC3JDS-C7A722'
       request.session.startText = '2 June 2017'
       request.session.endText = '3 June 2018'
       request.session.licencelength = true
@@ -109,7 +107,6 @@ const handlers = {
 
 
     else if (request.session.licenceNumber === 'C7A744') {
-      request.session.licenceNumber = '00010418-3WC3JDS-C7A744'
       request.session.startText = '2 June 2017'
       request.session.endText = '1 June 2018'
       request.session.licencelength = true
