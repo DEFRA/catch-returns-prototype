@@ -28,15 +28,19 @@ const handlers = {
 
     // Save big fish
     var big = {
-
+      day: request.session.day,
+      month: request.session.month,
+      year: request.session.year,
       date: request.session.date,
       bait: request.payload.bait,
       typeOfFish: request.session.typeOfFish,
+      lb: request.session.lb,
+      oz: request.session.oz,
       weight: request.session.weight,
       MethodOfCapture: request.session.MethodOfCapture,
       released: request.session.released
     }
-    
+
     global.rivers[request.session.riverName].bigFish.push(big)
 
 
@@ -45,7 +49,7 @@ const handlers = {
 
     if (request.payload.next === "Review") {
       return reply.redirect('review')
-    //return reply(rivers)
+      //return reply(rivers)
     } else {
       return reply.redirect('add-salmon-and-large-sea-trout')
       //return reply(rivers)

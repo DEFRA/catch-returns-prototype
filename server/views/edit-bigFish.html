@@ -2,12 +2,11 @@
   <div class="column-full reducemargin">
     {{> common/back}} {{> common/errors}}
 
-    <h1 class="heading-large">Edit salmon and large sea trout (over 1lb) for river {{riverName}}</h1>
-
+    <h1 class="heading-large">Edit salmon and large sea trout (over 1lb) for river {{currentRiver}}</h1>
     <form method="post" autocomplete="off" novalidate>
 
       <fieldset data-required data-error="{{errorMessage}}">
-        <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river {{riverName}}</legend>
+        <legend class="visually-hidden">Add salmon and large sea trout (over 1lb) for river {{currentRiver}}</legend>
         <div class="form-group">
           <h3 class="heading-small">Date of catch</h3>
 

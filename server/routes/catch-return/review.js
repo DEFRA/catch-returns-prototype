@@ -7,12 +7,8 @@ const handlers = {
       rivers: global.rivers,
       smallFish: global.rivers.smallFish,
       bigFish: global.rivers.bigFish,
-      riverCount: global.rivers.length,
-      // smallFish: global.smallFish,
-      // smallFishCount: global.smallFish.length,
-      // bigFish: global.bigFish,
-      // bigFishCount: global.bigFish.length,
       river: request.session.riverName,
+      riverCount: ""
     })
 
 
