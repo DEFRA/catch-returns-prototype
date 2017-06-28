@@ -54,8 +54,7 @@ const handlers = {
         bigFish: [
         ],
         smallFish: [
-          { month: 'June 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
-          { month: 'July 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, }
+          { month: 'June 17', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, }
         ]
       }
     }

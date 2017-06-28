@@ -1,9 +1,36 @@
 const handlers = {
   get: function (request, reply) {
 
-    if (global.rivers[request.query.a].bigFish[Number(request.query.b)].released === request.payload.released) {
-       var checked = true;
-      }
+    if (global.rivers[request.query.a].bigFish[Number(request.query.b)].released === "Yes") {
+      yesChecked = true;
+      noChecked = false;
+    } else {
+      noChecked = true;
+      yesChecked = false;
+    }
+
+    if (global.rivers[request.query.a].bigFish[Number(request.query.b)].MethodOfCapture === "fly") {
+      flyChecked = true;
+      spinnerChecked = false;
+      baitChecked = false;
+    } else if (global.rivers[request.query.a].bigFish[Number(request.query.b)].MethodOfCapture === "spinner") {
+      flyChecked = false;
+      spinnerChecked = true;
+      baitChecked = false;
+    } else {
+      flyChecked = false;
+      spinnerChecked = false;
+      baitChecked = true;
+    }
+
+    if (global.rivers[request.query.a].bigFish[Number(request.query.b)].typeOfFish === "Sea trout") {
+      SeaTroutChecked = true;
+      SalmonChecked = false;
+    } else {
+      SeaTroutChecked = false;
+      SalmonChecked = true;
+    }
+
 
     return reply.view('edit-bigFish', {
       //pageTitle: 'Please enter details for the river where you fished',
@@ -13,9 +40,23 @@ const handlers = {
       rivers: global.rivers,
       validMonths: global.validMonths,
       currentFish: global.rivers[request.query.a].bigFish[Number(request.query.b)],
-      currentRiver: request.query.a,      
+      currentRiver: request.query.a,
+      yesChecked: yesChecked,
+      noChecked: noChecked,
+      flyChecked: flyChecked,
+      spinnerChecked: spinnerChecked,
+      baitChecked: baitChecked,
+      SeaTroutChecked: SeaTroutChecked,
+      SalmonChecked: SalmonChecked,
+
+
+      //checked: "yes" === global.rivers[request.query.a].bigFish[Number(request.query.b)].released,
+      //checked: request.session.value === global.rivers[request.query.a].bigFish[Number(request.query.b)].released,
+
     })
-     
+
+
+
   },
   post: function (request, reply) {
     request.session.day = request.payload.day
@@ -32,18 +73,22 @@ const handlers = {
 
     // Save big fish
     global.rivers[request.query.a].bigFish[Number(request.query.b)].riverName = request.session.riverName
-    global.rivers[request.query.a].bigFish[Number(request.query.b)].day = request.session.day 
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].day = request.session.day
     global.rivers[request.query.a].bigFish[Number(request.query.b)].month = request.session.month
     global.rivers[request.query.a].bigFish[Number(request.query.b)].year = request.session.year
     global.rivers[request.query.a].bigFish[Number(request.query.b)].date = request.session.date
     global.rivers[request.query.a].bigFish[Number(request.query.b)].bait = request.session.bait
     global.rivers[request.query.a].bigFish[Number(request.query.b)].typeOfFish = request.session.typeOfFish
-    global.rivers[request.query.a].bigFish[Number(request.query.b)].lb = request.session.lb 
-    global.rivers[request.query.a].bigFish[Number(request.query.b)].oz =  request.session.oz
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].lb = request.session.lb
+    global.rivers[request.query.a].bigFish[Number(request.query.b)].oz = request.session.oz
     global.rivers[request.query.a].bigFish[Number(request.query.b)].weight = request.session.weight
     global.rivers[request.query.a].bigFish[Number(request.query.b)].MethodOfCapture = request.session.MethodOfCapture
     global.rivers[request.query.a].bigFish[Number(request.query.b)].released = request.session.released
-    return reply.redirect('review')
+
+
+    return reply(request.session.released)
+
+    //return reply.redirect('review')
   }
 }
 

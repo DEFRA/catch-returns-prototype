@@ -2,10 +2,6 @@
   <div class="column-full reducemargin">
     {{> common/back}} {{> common/errors}}
 
-    {{currentFish.released}} <br>
-    {{currentFish.MethodOfCapture}} <br>
-    {{currentFish.typeOfFish}} <br>
-
     <h1 class="heading-large">Edit salmon and large sea trout (over 1lb) for river {{currentRiver}}</h1>
     <form method="post" autocomplete="off" novalidate>
 
@@ -117,10 +113,10 @@
         <div class="form-group">
           <h3 class="heading-small">Type of catch</h3>
           <label for="salmonAndGrilse" class="block-label selection-button-radio">Salmon and Grilse
-            <input id="salmonAndGrilse" type="radio" name="fishType" value="Salmon and Grilse" {{#if checked}}checked{{/if}}>
+            <input id="salmonAndGrilse" type="radio" name="fishType" value="Salmon and Grilse" {{#if SalmonChecked}}checked{{/if}}>
           </label>
           <label for="SeaTrout" class="block-label selection-button-radio">Sea Trout
-            <input id="SeaTrout" type="radio" name="fishType" value="Sea Trout" {{#if checked}}checked{{/if}}>
+            <input id="SeaTrout" type="radio" name="fishType" value="Sea Trout" {{#if SeaTroutChecked}}checked{{/if}}>
           </label>
         </div>
       </fieldset>
@@ -130,11 +126,11 @@
           <h3 class="heading-small">Weight of catch</h3>
           <div class="form-group-day">
             <label class="form-label day" for="lb">lb</label>
-            <input class="form-control" id="lb" name="lb" type="number" value="{{currentFish.lb}}" {{#if checked}}checked{{/if}}>
+            <input class="form-control" id="lb" name="lb" type="number" value="{{currentFish.lb}}" >
           </div>
           <div class="form-group-month">
             <label class="form-label month" for="oz">oz</label>
-            <input class="form-control" id="oz" name="oz" type="number" value="{{currentFish.oz}}" {{#if checked}}checked{{/if}}>
+            <input class="form-control" id="oz" name="oz" type="number" value="{{currentFish.oz}}">
           </div>
           <!-- <button class="button button-secondary">Convert to metric</button> -->
         </div>
@@ -145,13 +141,13 @@
         <div class="form-group">
           <h3 class="heading-small">Method of capture</h3>
           <label for="methodFly" class="block-label selection-button-radio">Fly
-                  <input id="methodFly" type="radio" name="MethodOfCapture" value="methodFly" {{#if checked}}checked{{/if}}>
+                  <input id="methodFly" type="radio" name="MethodOfCapture" value="methodFly" {{#if flyChecked}}checked{{/if}}>
                 </label>
           <label for="methodSpinner" class="block-label selection-button-radio">Spinner
-                  <input id="methodSpinner" type="radio" name="MethodOfCapture" value="methodSpinner" {{#if checked}}checked{{/if}}>
+                  <input id="methodSpinner" type="radio" name="MethodOfCapture" value="methodSpinner" {{#if spinnerChecked}}checked{{/if}}>
                 </label>
           <label for="methodBait" class="block-label selection-button-radio">Bait
-                  <input id="methodBait" type="radio" name="MethodOfCapture" value="methodBait" {{#if checked}}checked{{/if}}>
+                  <input id="methodBait" type="radio" name="MethodOfCapture" value="methodBait" {{#if baitChecked}}checked{{/if}}>
                 </label>
         </div>
       </fieldset>
@@ -159,10 +155,10 @@
         <div class="form-group">
           <h3 class="heading-small">Released</h3>
           <label for="Yes" class="block-label selection-button-radio">Yes
-                  <input id="Yes" type="radio" name="released" value="Yes" {{#if checked}}checked{{/if}}>
+                  <input id="Yes" type="radio" name="released" value="Yes" {{#if yesChecked}}checked{{/if}}>
                 </label>
           <label for="No" class="block-label selection-button-radio">No
-                  <input id="No" type="radio" name="released" value="No" {{#if checked}}checked{{/if}}>
+                  <input id="No" type="radio" name="released" value="No" {{#if noChecked}}checked{{/if}}>
                 </label>
         </div>
       </fieldset>

@@ -34,16 +34,16 @@ const handlers = {
       NumberOfFishReleased: request.payload.NumberOfFishReleased0,
     }
 
-    var small1 = {
-      month: request.payload.month1,
-      fly: request.payload.fly1,
-      spinner: request.payload.spinner1,
-      bait: request.payload.bait1,
-      total: Number(request.payload.fly1) + Number(request.payload.spinner1) + Number(request.payload.bait1),
-      NumberOfFishReleased: request.payload.NumberOfFishReleased1
-    }
-
     if (request.session.licenceNumber === 'C7A722' || request.session.licenceNumber === 'C7A744') {
+
+      var small1 = {
+        month: request.payload.month1,
+        fly: request.payload.fly1,
+        spinner: request.payload.spinner1,
+        bait: request.payload.bait1,
+        total: Number(request.payload.fly1) + Number(request.payload.spinner1) + Number(request.payload.bait1),
+        NumberOfFishReleased: request.payload.NumberOfFishReleased1
+      }
 
       var small2 = {
         month: request.payload.month2,
@@ -147,9 +147,9 @@ const handlers = {
     }
 
     global.rivers[request.session.riverName].smallFish[0] = small0
-    global.rivers[request.session.riverName].smallFish[1] = small1
-    
+
     if (request.session.licenceNumber === 'C7A722' || request.session.licenceNumber === 'C7A744') {
+      global.rivers[request.session.riverName].smallFish[1] = small1
       global.rivers[request.session.riverName].smallFish[2] = small2
       global.rivers[request.session.riverName].smallFish[3] = small3
       global.rivers[request.session.riverName].smallFish[4] = small4
@@ -162,11 +162,6 @@ const handlers = {
       global.rivers[request.session.riverName].smallFish[11] = small11
       global.rivers[request.session.riverName].smallFish[12] = small12
     }
-
-
-
-
-
 
 
     if (request.payload.next === "Review") {
