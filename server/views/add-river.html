@@ -8,13 +8,14 @@
         <div class="form-group">
           <label class="form-label" for="select-box">River name</label>
           <select class="form-control" id="riverName" name="riverName">
-                      <option value="Aber" selected="selected">Aber</option>
+                      <option value="Select a river" selected="selected">Select a river</option>
+                      <option value="Aber">Aber</option>
                       <option value="Adur">Adur</option>
                       <option value="Aeron">Aeron</option>
                       <option value="Afan">Afan</option>
                       <option value="Aled">Aled</option>
-                      <option value="Allen">Allen</option>
-                      <option value="Allen NE">Allen NE</option>
+                      <option value="Allen">Allen (Cornwall)</option>
+                      <option value="Allen NE">Allen (Northumberland)</option>
                       <option value="Aln">Aln</option>
                       <option value="Alwen">Alwen</option>
                       <option value="Alyn \ Alun">Alyn \ Alun</option>
@@ -24,8 +25,8 @@
                       <option value="Artro">Artro</option>
                       <option value="Arun">Arun</option>
                       <option value="Avon (Devon)">Avon (Devon)</option>
-                      <option value="Avon (Hants)">Avon (Hants)</option>
-                      <option value="Avon Water (Hants)">Avon Water (Hants)</option>
+                      <option value="Avon (Hants)">Avon (Hampshire)</option>
+                      <option value="Avon Water (Hants)">Avon Water (Hampshire)</option>
                       <option value="Axe">Axe</option>
                       <option value="Banwy">Banwy</option>
                       <option value="Barle">Barle</option>
@@ -70,9 +71,9 @@
                       <option value="Cywyn \ Cowin">Cywyn \ Cowin</option>
                       <option value="Dart">Dart</option>
                       <option value="Dee">Dee</option>
-                      <option value="Derwent">Derwent</option>
-                      <option value="Derwent Tyne">Derwent Tyne</option>
+                      <option value="Derwent">Derwent (Cumbria)</option>
                       <option value="Derwent (Yorkshire)">Derwent (Yorkshire)</option>
+                      <option value="Derwent Tyne">Derwent (Tyne)</option>
                       <option value="Dewi Fawr">Dewi Fawr</option>
                       <option value="Duad">Duad</option>
                       <option value="Duddon">Duddon</option>
@@ -86,7 +87,7 @@
                       <option value="Dysynni">Dysynni</option>
                       <option value="Eamont">Eamont</option>
                       <option value="Ebbw">Ebbw</option>
-                      <option value="Eden (NW)">Eden (NW)</option>
+                      <option value="Eden (NW)">Eden (Cumbria)</option>
                       <option value="Eden (Wales)">Eden (Wales)</option>
                       <option value="Ehen">Ehen</option>
                       <option value="Ellen">Ellen</option>
@@ -174,7 +175,7 @@
                       <option value="Rhymney">Rhymney</option>
                       <option value="Ribble">Ribble</option>
                       <option value="Rothay">Rothay</option>
-                      <option value="Rother (Eastern)">Rother (Eastern)</option>
+                      <option value="Rother (Eastern)">Rother (East Sussex)</option>
                       <option value="Rother (Petworth)">Rother (Petworth)</option>
                       <option value="Rusland Pool">Rusland Pool</option>
                       <option value="Sawdde">Sawdde</option>
@@ -187,7 +188,7 @@
                       <option value="Sprint">Sprint</option>
                       <option value="Stock Ghyll">Stock Ghyll</option>
                       <option value="Stour (Kent)">Stour (Kent)</option>
-                      <option value="Stour (SW)">Stour (SW)</option>
+                      <option value="Stour (SW)">Stour (Hants)</option>
                       <option value="Swale">Swale</option>
                       <option value="Syfynwy">Syfynwy</option>
                       <option value="Taf">Taf</option>
@@ -216,7 +217,7 @@
                       <option value="Tywi / Towy">Tywi / Towy</option>
                       <option value="Ure">Ure</option>
                       <option value="Usk">Usk</option>
-                      <option value="Vyrynwy">Vyrynwy</option>
+                      <option value="Vyrynwy">Vyrnwy</option>
                       <option value="Walkham">Walkham</option>
                       <option value="Wansbeck">Wansbeck</option>
                       <option value="Wear">Wear</option>
@@ -225,7 +226,7 @@
                       <option value="Wnion">Wnion</option>
                       <option value="Wye">Wye</option>
                       <option value="Wygyr (Anglesea)">Wygyr (Anglesea)</option>
-                      <option value="Wyre (NW)">Wyre (NW)</option>
+                      <option value="Wyre (NW)">Wyre (Lancashire)</option>
                       <option value="Wyre (Wales)">Wyre (Wales)</option>
                       <option value="Yare">Yare</option>
                       <option value="Yarty">Yarty</option>
@@ -243,7 +244,8 @@
       <br>
       <fieldset class="inline" data-required data-error="{{errorMessageTwo}}">
         <div class="form-group">
-          <label class="form-label" for="riverTown">Nearest town</label>
+          <!--<label class="form-label" for="riverTown">Nearest Town. (Used to validate river selection. Only one town required per river)</label>-->
+           <label class="form-label" for="riverTown">Nearest Town (only one town required per river)</label>
           <input class="form-control" id="riverTown" name="riverTown" value="{{riverTown}}" type="text">
         </div>
       </fieldset>

@@ -1,9 +1,34 @@
 <div class="grid-row">
-  <div class="column-two-thirds reducemargin">
-    {{> common/back}} {{> common/errors}}
-    <!--<h1 class="heading-large">{{pageTitle}}</h1> -->
-    <h1 class="heading-large">Have you fished during the period of your licence? ({{startText}} and {{endText}})</h1>
-    <!--<form method="post" autocomplete="off" novalidate>
+    <div class="column-two-thirds reducemargin">
+        {{> common/back}} {{> common/errors}}
+
+
+       <!--<h1 class="heading-large"> Which season does your catch return relate to?</h1>-->
+       <!--<form method="post" autocomplete="off" novalidate>
+            <fieldset class="inline" data-required data-error="{{errorMessage}}">
+                 <legend class="visually-hidden">Have you fished during the period of your licence? ({{startText}} and {{endText}})</legend>
+                <div class="form-group">
+                    {{#each itemsTwo}}
+                    <label for="{{id}}" class="block-label selection-button-radio" {{#if selectedText}}data-target="{{name}}_text" {{/if}}>
+                        <input id="{{id}}" type="radio" name="{{name}}" value="{{id}}" {{#if checked}}checked{{/if}}>
+                        {{text}}
+                        {{#if subText}}
+                            <br>{{subText}}
+                        {{/if}}
+                    </label> {{#if selectedText}}
+                    <div class="panel panel-border-narrow js-hidden" id="{{name}}_text">
+                        <p>{{selectedText}}</p>
+                    </div>
+                    {{/if}} {{/each}}
+                </div>
+            </fieldset>
+            <button type="submit" class="button">Continue</button>
+        </form>-->
+
+        <!--<h1 class="heading-large">{{pageTitle}}</h1> -->
+        <!--<h1 class="heading-large">Have you fished during the period of your licence? ({{startText}} and {{endText}})</h1>-->
+        <h1 class="heading-large">Have you fished for salmon and/or adult sea trout in 2017?</h1>
+        <!--<form method="post" autocomplete="off" novalidate>
             <fieldset class="inline" data-required data-error="{{errorMessage}}">
                  <legend class="visually-hidden">Have you fished during the period of your licence? ({{startText}} and {{endText}})</legend>
                 <div class="form-group">
@@ -24,8 +49,14 @@
             <button type="submit" class="button">Continue</button>
         </form>-->
 
-    <a href="add-river" class="button">Yes</a>
-    <a href="did-not-fish" class="button">No</a>
+        <p>
+            <a href="add-river" class="button">Yes, I have fished</a>
+            <a href="did-not-fish" class="button">No, I did not fish (DNF)</a>
+        </p>
+        <p>If you fished but did not catch please select 'Yes, I have fished' then enter the river(s) and numbers of days fished
+            information. Only if you did not fish for salmon and sea trout at all during the season do you select 'No, I
+            did not fish (DNF).
+        </p>
 
-  </div>
+    </div>
 </div>
