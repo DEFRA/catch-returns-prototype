@@ -31,7 +31,7 @@ const handlers = {
         smallFish: [
           { month: 'June 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
           { month: 'July 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
-          { month: 'Augaust 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
+          { month: 'August 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
           { month: 'Septembe 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
           { month: 'October 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
           { month: 'November 16', fly: 0, spinner: 0, bait: 0, total: 0, NumberOfFishReleased: 0, },
