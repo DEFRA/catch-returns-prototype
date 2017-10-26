@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.view('which-licence-do-you-have', {
+    return reply.view('existing/which-licence-do-you-have', {
       pageTitle: 'How long is your licence number?',
       errorMessage: 'Tell us how long your licence number is',
       items: {
@@ -34,14 +34,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/which-licence-do-you-have',
+  path: '/existing/which-licence-do-you-have',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/which-licence-do-you-have',
+  path: '/existing/which-licence-do-you-have',
   config: {
     handler: handlers.post
   }

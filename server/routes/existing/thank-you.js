@@ -1,26 +1,26 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.view('thank-you-email', {
+    return reply.view('existing/thank-you', {
       pageTitle: 'Thank you',
-      // errorMessage: 'Tell us how long your licence number is',
+      errorMessage: 'Enter a valid email address',
     })
   },
   post: function (request, reply) {
-    return reply.redirect('thank-you')
+    return reply.redirect('thank-you-email')
   }
 }
 
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/thank-you-email',
+  path: '/existing/thank-you',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/thank-you-email',
+  path: '/existing/thank-you',
   config: {
     handler: handlers.post
   }

@@ -19,14 +19,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/delete-bigFish',
+  path: '/existing/delete-bigFish',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/delete-bigFish',
+  path: '/existing/delete-bigFish',
   config: {
     handler: handlers.post
   }

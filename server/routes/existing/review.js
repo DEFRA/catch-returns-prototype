@@ -2,7 +2,7 @@ const handlers = {
 
   get: function (request, reply) {
 
-    return reply.view('review', {
+    return reply.view('existing/review', {
       pageTitle: 'Review the information that you have entered',
       rivers: global.rivers,
       smallFish: global.rivers.smallFish,
@@ -22,14 +22,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/review',
+  path: '/existing/review',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/review',
+  path: '/existing/review',
   config: {
     handler: handlers.post
   }

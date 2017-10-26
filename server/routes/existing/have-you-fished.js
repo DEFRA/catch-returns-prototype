@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.view('have-you-fished', {
+    return reply.view('existing/have-you-fished', {
       pageTitle: 'Have you fished during the period of your licence?',
       errorMessage: 'Tell us if you fished',
       startText: request.session.startText,
@@ -52,14 +52,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/have-you-fished',
+  path: '/existing/have-you-fished',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/have-you-fished',
+  path: '/existing/have-you-fished',
   config: {
     handler: handlers.post
   }

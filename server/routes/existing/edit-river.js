@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.view('edit-river', {
+    return reply.view('existing/edit-river', {
       pageTitle: 'Please enter details for the river where you fished',
       rivers: global.rivers,
       validMonths: global.validMonths,
@@ -29,14 +29,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/edit-river',
+  path: '/existing/edit-river',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/edit-river',
+  path: '/existing/edit-river',
   config: {
     handler: handlers.post
   }

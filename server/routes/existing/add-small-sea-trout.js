@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.view('add-small-sea-trout', {
+    return reply.view('existing/add-small-sea-trout', {
       //pageTitle: 'Please enter details for the river where you fished',
       //errorMessage: '',
       currentRiver: request.session.riverName,
@@ -179,14 +179,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/add-small-sea-trout',
+  path: '/existing/add-small-sea-trout',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/add-small-sea-trout',
+  path: '/existing/add-small-sea-trout',
   config: {
     handler: handlers.post
   }

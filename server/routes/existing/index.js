@@ -1,13 +1,13 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.redirect('catch-return/new-licence-number')
+    return reply.redirect('existing/new-licence-number')
   }
 }
 
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return',
+  path: '/existing',
   config: {
     handler: handlers.get
   }

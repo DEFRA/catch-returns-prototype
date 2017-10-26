@@ -32,7 +32,7 @@ const handlers = {
     }
 
 
-    return reply.view('edit-bigFish', {
+    return reply.view('existing/edit-bigFish', {
       //pageTitle: 'Please enter details for the river where you fished',
       //errorMessage: 'Enter the date of the catch',
       riverName: request.session.riverName,
@@ -95,14 +95,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/edit-bigFish',
+  path: '/existing/edit-bigFish',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/edit-bigFish',
+  path: '/existing/edit-bigFish',
   config: {
     handler: handlers.post
   }

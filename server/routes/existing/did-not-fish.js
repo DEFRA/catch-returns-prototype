@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.view('did-not-fish', {
+    return reply.view('existing/did-not-fish', {
       pageTitle: 'Review the information that you have entered',
     })
   },
@@ -12,14 +12,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/did-not-fish',
+  path: '/existing/did-not-fish',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/did-not-fish',
+  path: '/existing/did-not-fish',
   config: {
     handler: handlers.post
   }

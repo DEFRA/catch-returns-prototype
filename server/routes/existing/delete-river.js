@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.view('delete-river', {
+    return reply.view('existing/delete-river', {
       pageTitle: 'Are you sure you want to delete this river?',   
     })
   },
@@ -18,14 +18,14 @@ const handlers = {
 
 module.exports = [{
   method: 'GET',
-  path: '/catch-return/delete-river',
+  path: '/existing/delete-river',
   config: {
     handler: handlers.get
   }
 },
 {
   method: 'POST',
-  path: '/catch-return/delete-river',
+  path: '/existing/delete-river',
   config: {
     handler: handlers.post
   }
