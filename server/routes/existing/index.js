@@ -1,6 +1,6 @@
 const handlers = {
   get: function (request, reply) {
-    return reply.redirect('existing/new-licence-number')
+    return reply.redirect('existing/licence-details')
   }
 }
 

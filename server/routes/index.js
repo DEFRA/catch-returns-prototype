@@ -9,8 +9,7 @@ module.exports = [].concat(
   // Existing catch returns
   require('./existing'),
   require('./existing/which-licence-do-you-have'),
-  require('./existing/new-licence-number'),
-  require('./existing/old-licence-number'),
+  require('./existing/licence-details'),
   require('./existing/have-you-fished'),
   require('./existing/did-not-fish'),
   require('./existing/add-river'),
@@ -24,5 +23,11 @@ module.exports = [].concat(
   require('./existing/delete-river'),
   require('./existing/delete-bigFish'),
   require('./existing/edit-river'),
-  require('./existing/edit-bigFish')
+  require('./existing/edit-bigFish'),
+
+
+
+  // Demo - design ideas
+  require('./demo/have-you-fished'),
+  require('./demo/licence-details')
 )
