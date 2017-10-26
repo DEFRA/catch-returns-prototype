@@ -1,0 +1,265 @@
+<div class="grid-row">
+  <div class="column-full reducemargin">
+    {{> common/back}} {{> common/errors}}
+    <h1 class="heading-large">{{pageTitle}}</h1>
+
+    <form method="post" autocomplete="off" novalidate>
+      <fieldset class="inline" data-required data-error="{{errorMessage}}">
+        <div class="form-group">
+          <label class="form-label" for="select-box">River name</label>
+          <!--<input id="month" type="text" value="{{currentRiver.riverName}}" name="riverName" readonly></td>-->
+          <select class="form-control" id="riverName" name="riverName">
+                      <option value="currentRiver.riverName" selected="selected">{{currentRiver.riverName}}</option>
+                      <option value="Adur">Adur</option>
+                      <option value="Aeron">Aeron</option>
+                      <option value="Afan">Afan</option>
+                      <option value="Aled">Aled</option>
+                      <option value="Allen">Allen</option>
+                      <option value="Allen NE">Allen NE</option>
+                      <option value="Aln">Aln</option>
+                      <option value="Alwen">Alwen</option>
+                      <option value="Alyn \ Alun">Alyn \ Alun</option>
+                      <option value="Amman">Amman</option>
+                      <option value="Annas">Annas</option>
+                      <option value="Arth">Arth</option>
+                      <option value="Artro">Artro</option>
+                      <option value="Arun">Arun</option>
+                      <option value="Avon (Devon)">Avon (Devon)</option>
+                      <option value="Avon (Hants)">Avon (Hants)</option>
+                      <option value="Avon Water (Hants)">Avon Water (Hants)</option>
+                      <option value="Axe">Axe</option>
+                      <option value="Banwy">Banwy</option>
+                      <option value="Barle">Barle</option>
+                      <option value="Beaulieu">Beaulieu</option>
+                      <option value="Bela">Bela</option>
+                      <option value="Black Beck">Black Beck</option>
+                      <option value="Borrow Beck">Borrow Beck</option>
+                      <option value="Bovey">Bovey</option>
+                      <option value="Brathay">Brathay</option>
+                      <option value="Bray">Bray</option>
+                      <option value="Brit">Brit</option>
+                      <option value="Brock">Brock</option>
+                      <option value="Bure">Bure</option>
+                      <option value="Calder">Calder</option>
+                      <option value="Caldew">Caldew</option>
+                      <option value="Camel">Camel</option>
+                      <option value="Caseg">Caseg</option>
+                      <option value="Cefni">Cefni</option>
+                      <option value="Cegin (Menai Strait)">Cegin (Menai Strait)</option>
+                      <option value="Ceirw">Ceirw</option>
+                      <option value="Cennen">Cennen</option>
+                      <option value="Ceri">Ceri</option>
+                      <option value="Ceriog">Ceriog</option>
+                      <option value="Cleddau (Eastern)">Cleddau (Eastern)</option>
+                      <option value="Cleddau (Western)">Cleddau (Western)</option>
+                      <option value="Cleifon">Cleifon</option>
+                      <option value="Clettwr">Clettwr</option>
+                      <option value="Clwyd">Clwyd</option>
+                      <option value="Clywedog">Clywedog</option>
+                      <option value="Cocker">Cocker</option>
+                      <option value="Colwyn">Colwyn</option>
+                      <option value="Coly">Coly</option>
+                      <option value="Conder">Conder</option>
+                      <option value="Conwy">Conwy</option>
+                      <option value="Coquet">Coquet</option>
+                      <option value="Coron Lake (Anglesea)">Coron Lake (Anglesea)</option>
+                      <option value="Cothi">Cothi</option>
+                      <option value="Crake">Crake</option>
+                      <option value="Cresswell">Cresswell</option>
+                      <option value="Cych">Cych</option>
+                      <option value="Cynin">Cynin</option>
+                      <option value="Cywyn \ Cowin">Cywyn \ Cowin</option>
+                      <option value="Dart">Dart</option>
+                      <option value="Dee">Dee</option>
+                      <option value="Derwent">Derwent</option>
+                      <option value="Derwent Tyne">Derwent Tyne</option>
+                      <option value="Derwent (Yorkshire)">Derwent (Yorkshire)</option>
+                      <option value="Dewi Fawr">Dewi Fawr</option>
+                      <option value="Duad">Duad</option>
+                      <option value="Duddon">Duddon</option>
+                      <option value="Dulas (Colwyn Bay)">Dulas (Colwyn Bay)</option>
+                      <option value="Dulas (North)">Dulas (North)</option>
+                      <option value="Dulas (South)">Dulas (South)</option>
+                      <option value="Dwyfach">Dwyfach</option>
+                      <option value="Dwyfawr">Dwyfawr</option>
+                      <option value="Dwyryd">Dwyryd</option>
+                      <option value="Dyfi / Dovey">Dyfi / Dovey</option>
+                      <option value="Dysynni">Dysynni</option>
+                      <option value="Eamont">Eamont</option>
+                      <option value="Ebbw">Ebbw</option>
+                      <option value="Eden (NW)">Eden (NW)</option>
+                      <option value="Eden (Wales)">Eden (Wales)</option>
+                      <option value="Ehen">Ehen</option>
+                      <option value="Ellen">Ellen</option>
+                      <option value="Elwy">Elwy</option>
+                      <option value="Ely">Ely</option>
+                      <option value="Erch">Erch</option>
+                      <option value="Erme">Erme</option>
+                      <option value="Esk (Border)">Esk (Border)</option>
+                      <option value="Esk (Cumbrian)">Esk (Cumbrian)</option>
+                      <option value="Esk (Yorkshire)">Esk (Yorkshire)</option>
+                      <option value="Ewenny">Ewenny</option>
+                      <option value="Exe">Exe</option>
+                      <option value="Fal">Fal</option>
+                      <option value="Fowey">Fowey</option>
+                      <option value="Frome">Frome</option>
+                      <option value="Gannel">Gannel</option>
+                      <option value="Garw">Garw</option>
+                      <option value="Gelt">Gelt</option>
+                      <option value="Glaslyn">Glaslyn</option>
+                      <option value="Grannell">Grannell</option>
+                      <option value="Greta (Keswick)">Greta (Keswick)</option>
+                      <option value="Greta (Lancaster)">Greta (Lancaster)</option>
+                      <option value="Greta (Tees, B. Castle)">Greta (Tees, B. Castle)</option>
+                      <option value="Gwaun">Gwaun</option>
+                      <option value="Gwendraeth Fach">Gwendraeth Fach</option>
+                      <option value="Gwendraeth Fawr">Gwendraeth Fawr</option>
+                      <option value="Gwili">Gwili</option>
+                      <option value="Gwyrfai">Gwyrfai</option>
+                      <option value="Hayle">Hayle</option>
+                      <option value="Hindburn">Hindburn</option>
+                      <option value="Hodder">Hodder</option>
+                      <option value="Inny">Inny</option>
+                      <option value="Irfon">Irfon</option>
+                      <option value="Irt">Irt</option>
+                      <option value="Irthing">Irthing</option>
+                      <option value="Itchen">Itchen</option>
+                      <option value="Ithon">Ithon</option>
+                      <option value="Keer">Keer</option>
+                      <option value="Kenfig">Kenfig</option>
+                      <option value="Kent">Kent</option>
+                      <option value="Leri">Leri</option>
+                      <option value="Leven">Leven</option>
+                      <option value="Lickle">Lickle</option>
+                      <option value="Liddle">Liddle</option>
+                      <option value="Lledr">Lledr</option>
+                      <option value="Lliw (Swansea)">Lliw (Swansea)</option>
+                      <option value="Llugwy">Llugwy</option>
+                      <option value="Llyfni">Llyfni</option>
+                      <option value="Llynfi">Llynfi</option>
+                      <option value="Looe">Looe</option>
+                      <option value="Loughor">Loughor</option>
+                      <option value="Lugg">Lugg</option>
+                      <option value="Lune">Lune</option>
+                      <option value="Lyd">Lyd</option>
+                      <option value="Lymington">Lymington</option>
+                      <option value="Lyn">Lyn</option>
+                      <option value="Lyne">Lyne</option>
+                      <option value="Lynher">Lynher</option>
+                      <option value="Marron">Marron</option>
+                      <option value="Mawddach">Mawddach</option>
+                      <option value="Meavy">Meavy</option>
+                      <option value="Meon">Meon</option>
+                      <option value="Mint">Mint</option>
+                      <option value="Mole">Mole</option>
+                      <option value="Morlais">Morlais</option>
+                      <option value="Nadder">Nadder</option>
+                      <option value="Neath">Neath</option>
+                      <option value="Nene">Nene</option>
+                      <option value="Nevern">Nevern</option>
+                      <option value="Ogmore">Ogmore</option>
+                      <option value="Ogwen">Ogwen</option>
+                      <option value="Okement">Okement</option>
+                      <option value="Otter">Otter</option>
+                      <option value="Ottery">Ottery</option>
+                      <option value="Ouse (Sussex)">Ouse (Sussex)</option>
+                      <option value="Ouse (Yorkshire)">Ouse (Yorkshire)</option>
+                      <option value="Parkmill Stream (Gower)">Parkmill Stream (Gower)</option>
+                      <option value="Parrett">Parrett</option>
+                      <option value="Piddle">Piddle</option>
+                      <option value="Plym">Plym</option>
+                      <option value="Rawthay">Rawthay</option>
+                      <option value="Rede">Rede</option>
+                      <option value="Rheidol">Rheidol</option>
+                      <option value="Rhyd-hir">Rhyd-hir</option>
+                      <option value="Rhymney">Rhymney</option>
+                      <option value="Ribble">Ribble</option>
+                      <option value="Rothay">Rothay</option>
+                      <option value="Rother (Eastern)">Rother (Eastern)</option>
+                      <option value="Rother (Petworth)">Rother (Petworth)</option>
+                      <option value="Rusland Pool">Rusland Pool</option>
+                      <option value="Sawdde">Sawdde</option>
+                      <option value="Scalby Beck">Scalby Beck</option>
+                      <option value="Seaton">Seaton</option>
+                      <option value="Seiont">Seiont</option>
+                      <option value="Severn">Severn</option>
+                      <option value="Soch">Soch</option>
+                      <option value="Solva">Solva</option>
+                      <option value="Sprint">Sprint</option>
+                      <option value="Stock Ghyll">Stock Ghyll</option>
+                      <option value="Stour (Kent)">Stour (Kent)</option>
+                      <option value="Stour (SW)">Stour (SW)</option>
+                      <option value="Swale">Swale</option>
+                      <option value="Syfynwy">Syfynwy</option>
+                      <option value="Taf">Taf</option>
+                      <option value="Taff">Taff</option>
+                      <option value="Tamar">Tamar</option>
+                      <option value="Tanat">Tanat</option>
+                      <option value="Tavy">Tavy</option>
+                      <option value="Taw">Taw</option>
+                      <option value="Tawe">Tawe</option>
+                      <option value="Tees">Tees</option>
+                      <option value="Teifi">Teifi</option>
+                      <option value="Teign">Teign</option>
+                      <option value="Teme">Teme</option>
+                      <option value="Test">Test</option>
+                      <option value="Thames">Thames</option>
+                      <option value="Tiddy">Tiddy</option>
+                      <option value="Tone">Tone</option>
+                      <option value="Torridge">Torridge</option>
+                      <option value="Trent">Trent</option>
+                      <option value="Trout Beck">Trout Beck</option>
+                      <option value="Tryweryn">Tryweryn</option>
+                      <option value="Twymyn">Twymyn</option>
+                      <option value="Tyne (Main)">Tyne (Main)</option>
+                      <option value="Tyne (North)">Tyne (North)</option>
+                      <option value="Tyne (South)">Tyne (South)</option>
+                      <option value="Tywi / Towy">Tywi / Towy</option>
+                      <option value="Ure">Ure</option>
+                      <option value="Usk">Usk</option>
+                      <option value="Vyrynwy">Vyrynwy</option>
+                      <option value="Walkham">Walkham</option>
+                      <option value="Wansbeck">Wansbeck</option>
+                      <option value="Wear">Wear</option>
+                      <option value="Wenning">Wenning</option>
+                      <option value="Wharfe">Wharfe</option>
+                      <option value="Wnion">Wnion</option>
+                      <option value="Wye">Wye</option>
+                      <option value="Wygyr (Anglesea)">Wygyr (Anglesea)</option>
+                      <option value="Wyre (NW)">Wyre (NW)</option>
+                      <option value="Wyre (Wales)">Wyre (Wales)</option>
+                      <option value="Yare">Yare</option>
+                      <option value="Yarty">Yarty</option>
+                      <option value="Yealm">Yealm</option>
+                      <option value="Yscir">Yscir</option>
+                      <option value="Ysgethin (Barmouth)">Ysgethin (Barmouth)</option>
+                      <option value="Ystrad">Ystrad</option>
+                      <option value="Ystwyth">Ystwyth</option>
+                    </select>
+        </div>
+      </fieldset>
+      <fieldset class="inline" data-required data-error="{{errorMessageTwo}}">
+        <div class="form-group">
+          <label class="form-label" for="riverTown">Nearest town</label>
+          <input class="form-control" id="riverTown" name="riverTown" value="{{currentRiver.riverTown}}" type="text">
+        </div>
+      </fieldset>
+      <fieldset class="inline" data-required data-error="{{errorMessageThree}}">
+        <div class="form-group">
+          <label class="form-label" for="riverDaysBeforeJune">How many days (in digits) did you fish before 16 June?</label>
+          <input class="form-control form-group-number" id="riverDaysBeforeJune" name="riverDaysBeforeJune" value="{{currentRiver.riverDaysBeforeJune}} "type="text">
+        </div>
+      </fieldset>
+      <fieldset class="inline" data-required data-error="{{errorMessageFour}}">
+        <div class="form-group">
+          <label class="form-label" for="riverDaysAfterJune">How many days (in digits) did you fish after 16 June?</label>
+          <input class="form-control form-group-number" id="riverDaysAfterJune" name="riverDaysAfterJune" value="{{currentRiver.riverDaysAfterJune}}" type="text">
+        </div>
+      </fieldset>
+      <button value="Review" name="next" class="button" type="Submit">Save</button>
+      <a href="review" class="button button-secondary" >cancel</a>
+    </form>
+    <br>
+
+  </div>
+</div>

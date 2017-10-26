@@ -12,10 +12,27 @@ const handlers = {
           id: 'Yes',
         },
         two: {
-          text: 'No',
+          text: 'Yes, but I didn\'t catch anything',
           name: 'haveFished',
-          id: 'NoNew',
+          id: 'Nil',
         },
+        three: {
+          text: 'No, I did not fish (DNF)',
+          name: 'haveFished',
+          id: 'No',
+        },
+      },
+       itemsTwo: {
+        one: {
+          text: '2017',
+          name: '2017',
+          id: '2017',
+        },
+        two: {
+          text: '2018',
+          name: '2018',
+          id: '2018',
+        }
       }
     })
   },
