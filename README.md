@@ -1,4 +1,4 @@
-# fish-sales-prototype
+# catch-returns-prototype
 
 ## A hapi-based nodejs web server enterprise-ready project boilerplate.
 
@@ -39,7 +39,7 @@ Comes with these opinions out-of-the-box:
 
 - $ git clone https://github.com/EnvironmentAgency/fish-sales-prototype
 
-- $ cd fish-sales-app
+- $ cd catch-returns-prototype
 
 - Install dependencies
 
