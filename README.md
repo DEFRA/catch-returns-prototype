@@ -37,7 +37,7 @@ Comes with these opinions out-of-the-box:
 
 ### Getting started
 
-1. $ git clone https://github.com/EnvironmentAgency/fish-sales-prototype
+1. $ git clone https://github.com/DEFRA/catch-returns-prototype
 
 2. $ cd catch-returns-prototype
 
