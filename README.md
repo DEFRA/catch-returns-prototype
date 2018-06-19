@@ -37,20 +37,14 @@ Comes with these opinions out-of-the-box:
 
 ### Getting started
 
-- $ git clone https://github.com/EnvironmentAgency/fish-sales-prototype
+1. $ git clone https://github.com/EnvironmentAgency/fish-sales-prototype
 
-- $ cd catch-returns-prototype
+2. $ cd catch-returns-prototype
 
-- Install dependencies
+3. Install dependencies `$ npm install`
 
-- $ npm install
+4. Build `$ npm run build`
 
-- Build
+5. Start server `$ node index`
 
-- $ npm run build
-
-- Start server
-
-- $ node index
-
-- Open http://localhost:3002
+6. Open http://localhost:3002
