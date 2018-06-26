@@ -4,24 +4,12 @@
     <h1 class="heading-large">{{pageTitle}}</h1>
 
     <p>It will take at least 48 hours for newly purchased licence numbers to appear online before a catch return can be submitted.</p>
-    <details class="progressive-disclosure-margin" role="group">
-      <summary role="button" aria-controls="details-content-0" aria-expanded="true">
-        <span class="summary">I don't know my licence number</span>
-      </summary>
-      <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="false">
-        <p>Call us on <a href="tel:+443708506506">03708 506 506</a> (open 8am to 6pm Monday to Friday) or <a href="mailto:enquiries@environment-agency.gov.uk">email us at enquiries@environment-agency.gov.uk</a>          and we will try to find your licence details.
-        </p>
-      </div>
-    </details>
     <form method="post" autocomplete="off" novalidate>
       <h2 class="heading-medium">How long is your licence number?</h2>
       <fieldset data-required data-error="{{errorMessage}}">
         <legend class="visually-hidden">{{pageTitle}}</legend>
-
         <label class="block-label selection-button-radio" data-target="old-licence" for="example-old-licence">
-                <input id="example-old-licence" type="radio" name="radio-licence-group" value="Yes">
-                 I have a 9-digit licence number
-              </label>
+        <input id="example-old-licence" type="radio" name="radio-licence-group" value="Yes">I have a 9-digit licence number<span class="form-hint">For example, 345612895</span></label>
         <div class="panel panel-border-narrow js-hidden" id="old-licence">
           <label class="form-label" for="licenceNumberNine">
             <span class="bold">Enter the 9 digits of your licence number</span>
@@ -29,10 +17,9 @@
           </label>
           <input class="form-control" id="licenceNumberNine" name="licenceNumberNine" value="{{licenceNumberNine}}" type="text">
         </div>
-
         <label class="block-label selection-button-radio" data-target="new-licence" for="example-new-licence">
                 <input id="example-new-licence" type="radio" name="radio-licence-group" value="Yes">
-                My licence number is longer than 9 digits
+                My licence number is longer than 9 digits<span class="form-hint">For example, B7A718</span>
               </label>
         <div class="panel panel-border-narrow js-hidden" id="new-licence">
           <label class="form-label" for="licenceNumber">
@@ -41,10 +28,7 @@
         </label>
           <input class="form-control" id="licenceNumber" name="licenceNumber" value="{{licenceNumber}}" type="text">
         </div>
-
       </fieldset>
-
-
       <h2 class="heading-medium">What is your postcode?</h2>
 
       <fieldset data-required data-error="{{errorMessageTwo}}">
@@ -53,11 +37,18 @@
           <input class="form-control" id="postcode" name="postcode" type="text" value="" maxlength="10">
         </div>
       </fieldset>
-
-
-
-      <button type="submit" class="button">Continue</button>
+    <div class="form-group" style="margin-bottom: 30px;">
+      <button type="submit" class="button">Next</button>
+    </div>
     </form>
-    </br>
   </div>
+  <details class="progressive-disclosure-margin" role="group">
+    <summary role="button" aria-controls="details-content-0" aria-expanded="true">
+      <span class="summary">I don't know my licence number</span>
+    </summary>
+    <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="false">
+      <p>Call us on <a href="tel:+443708506506">03708 506 506</a> (open 8am to 6pm Monday to Friday) or <a href="mailto:enquiries@environment-agency.gov.uk">email us at enquiries@environment-agency.gov.uk</a>          and we will try to find your licence details.
+      </p>
+    </div>
+  </details>
 </div>
