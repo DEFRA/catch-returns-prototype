@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Please enter details for the river where you fished
+      </h1>
+      <form action="add-fish.html">
+        {{ govukInput({
+          label: {
+            text: "Name of river",
+            classes: "govuk-!-font-weight-bold"
+          },
+          hint: {
+            text: "e.g. Derwent (Cumbria)"
+          },
+          id: "river",
+          name: "river",
+          classes: "govuk-!-width-one-half"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "How many days did you fish this river?",
+            classes: "govuk-!-font-weight-bold"
+          },
+          hint: {
+            text: "Include days without a catch"
+          },
+          id: "days-fished",
+          name: "days-fished",
+          classes: "form-control-char-3"
+        }) }}
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+      </form>
+    </div>
+</div>
+
+{% endblock %}

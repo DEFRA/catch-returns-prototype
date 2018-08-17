@@ -1,0 +1,130 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Details of a fish you caught
+      </h1>
+      <form action="summary.html">
+
+        {{ govukInput({
+          label: {
+            text: "Name of river",
+            classes: "govuk-!-font-weight-bold"
+          },
+          hint: {
+            text: "e.g. Derwent (Cumbria)"
+          },
+          id: "river",
+          name: "river",
+          classes: "govuk-!-width-one-half"
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "changed-name",
+          name: "changed-name",
+          fieldset: {
+            legend: {
+              text: "Type of catch",
+              isPageHeading: false,
+              classes: "govuk-!-font-weight-bold"
+            }
+          },
+
+          items: [
+            {
+              value: "salmon",
+              text: "Salmon"
+            },
+            {
+              value: "sea-trout",
+              text: "Sea trout"
+            }
+          ]
+        }) }}
+
+        {{ govukDateInput({
+          id: "catch-date",
+          name: "catch-date",
+          fieldset: {
+            legend: {
+              text: "Date caught",
+              classes: "govuk-!-font-weight-bold"
+            }
+          },
+          items: [
+            {
+              name: "day"
+            },
+            {
+              name: "month"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "changed-name",
+          name: "changed-name",
+          fieldset: {
+            legend: {
+              text: "Method used",
+              classes: "govuk-!-font-weight-bold"
+            }
+          },
+          items: [
+            {
+              value: "fly",
+              text: "Fly"
+            },
+            {
+              value: "spinner",
+              text: "Spinner"
+            },
+            {
+              value: "bait",
+              text: "Bait"
+            }
+          ]
+        }) }}
+
+        {{ govukDateInput({
+          id: "catch-weight",
+          name: "catch-weight",
+          fieldset: {
+            legend: {
+              text: "Weight of fish",
+              classes: "govuk-!-font-weight-bold"
+            }
+           },
+          hint: {
+            text: "Only for salmon or sea trout weighing more than 1lb"
+          },
+          items: [
+            {
+              name: "Pounds",
+              classes: "form-control-char-3"
+            },
+            {
+              name: "Ounces",
+              classes: "form-control-char-3"
+            }
+          ]
+        }) }}
+
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+      </form>
+    </div>
+</div>
+
+{% endblock %}

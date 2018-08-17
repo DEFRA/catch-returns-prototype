@@ -1,0 +1,63 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Submit your catch return
+      </h1>
+      <p class="govuk-body">Check the following return is accurate and complete and then submit. If you need to make changes click the 'Return to summary' link.</p>
+      <form action="confirm.html">
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption">Rivers fished</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">River</th>
+              <th class="govuk-table__header" scope="col">Days fished in total</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row">Trent</th>
+              <td class="govuk-table__cell">11</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Fish caught</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">Type</th>
+              <th class="govuk-table__header" scope="col">River</th>
+              <th class="govuk-table__header" scope="col">Date</th>
+              <th class="govuk-table__header" scope="col">Method</th>
+              <th class="govuk-table__header" scope="col">Weight</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Salmon</td>
+              <td class="govuk-table__cell">Trent</td>
+              <td class="govuk-table__cell">08/08</td>
+              <td class="govuk-table__cell">Fly</td>
+              <td class="govuk-table__cell">10lb 2oz</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="submit" class="govuk-button">
+          Submit
+        </button>
+      </form>
+      <a class="govuk-body" href="summary">Return to summary</a>
+    </div>
+</div>
+
+{% endblock %}

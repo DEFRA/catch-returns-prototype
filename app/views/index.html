@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Report your salmon or sea trout catch
+      </h1>
+      <p class="govuk-body-l">It will take at least 48 hours for newly purchased licence numbers to appear online before a catch return can be submitted.</p>
+      <h2 class="govuk-heading-l">Enter your licence details</h2>
+      <form action="summary-empty.html">
+        {{ govukInput({
+          label: {
+            text: "Enter the last 6 characters of your licence number"
+          },
+          hint: {
+            text: "For example, B7A718"
+          },
+          id: "licence",
+          name: "licence",
+          classes: "govuk-input govuk-!-width-one-quarter"
+        }) }}
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+      </form>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I don't know my licence number
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          Call us on 03708 506 506 (open 8am to 6pm Monday to Friday) or <a href="mailto:enquiries@environment-agency.gov.uk">email us at enquiries@environment-agency.gov.uk</a> and we will try to find your licence details.
+        </div>
+      </details>
+    </div>
+</div>
+
+{% endblock %}

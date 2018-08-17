@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Your catch return report
+      </h1>
+      <form action="submit.html">
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption">Rivers fished</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">River</th>
+              <th class="govuk-table__header" scope="col">Days fished in total</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td colspan="3" class="govuk-table__cell govuk-table__cell--numeric defra-borderless"><a href="add-river">Add river</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Fish caught</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">Type</th>
+              <th class="govuk-table__header" scope="col">River</th>
+              <th class="govuk-table__header" scope="col">Date</th>
+              <th class="govuk-table__header" scope="col">Method</th>
+              <th class="govuk-table__header" scope="col">Weight</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td colspan="6" class="govuk-table__cell govuk-table__cell--numeric defra-borderless"><a href="add-fish">Add fish</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>If you expect to fish again this year please click the 'Exit and continue catch return later' link to return at a later date. You will then be able to update your return with further catches.</p>
+        <p>Otherwise, if you have finished fishing for the season, please click the 'Submit catch return' button to complete your catch return. Once submitted you will not be able to add or edit your return.</p>
+        <button type="submit" class="govuk-button">
+          Review and submit catch return
+        </button>
+      </form>
+      <a class="govuk-body" href="index">Exit and continue catch return later</a>
+    </div>
+</div>
+
+{% endblock %}
