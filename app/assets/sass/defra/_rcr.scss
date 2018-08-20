@@ -1,36 +1,8 @@
 // No border - mainly for table cells
-.defra-borderless
-{ border-width: 0;}
+.defra-borderless {
+  border-width: 0;
+}
 
-// Smaller text input style width to visually cue users for expected input
-.defra-width-one-eighth {
-    width: 100% !important;
-    @include govuk-media-query($from: tablet) {
-    width: 12.5% !important;
-    }
-  }
-// Above unsued now in favour of style below created by Martin Glancy
-
-// Form control widths
-// ==========================================================================
-
-// Setting the widths of forms based on the minimum number of visible characters to display in the input
-
-// chars  width in ems
-// 60     28.5
-// 50     26
-// 40     20
-// 35     18.5
-// 25     13.5
-// 20     10.5
-// 15     8.5
-// 10     6
-// 5      3.5
-// 3      2.5
-
-.form-control-char-3 {
-  width: 100%;
-  @include govuk-media-query($from: tablet) {
-    width: 2.5em;
-  }
+.defra-new-table-row {
+  background-color: rgba(236, 244, 250, .6);
 }

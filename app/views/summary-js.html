@@ -18,18 +18,21 @@
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th class="govuk-table__header" scope="col">River</th>
-              <th class="govuk-table__header" scope="col">Days fished in total</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Days fished in total</th>
               <th class="govuk-table__header govuk-table__header--numeric" scope="col">Actions</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__cell" scope="row">Derwent (Cumbria)</td>
-              <td class="govuk-table__cell">11</td>
+              <td class="govuk-table__cell govuk-table__header--numeric">11</td>
               <td class="govuk-table__cell govuk-table__cell--numeric"><a href="add-river">Edit</a> | <a href="delete-river">Delete</a></td>
             </tr>
-            <tr class="govuk-table__row">
-              <td colspan="3" class="govuk-table__cell govuk-table__cell--numeric defra-borderless"><a href="add-river">Add river</a></td>
+            <tr class="govuk-table__row defra-new-table-row">
+              <td class="govuk-table__cell" scope="row"><input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
+</td>
+              <td class="govuk-table__cell govuk-table__header--numeric"><input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="days" type="number" pattern="[0-9]*"></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Add river</td>
             </tr>
           </tbody>
         </table>
