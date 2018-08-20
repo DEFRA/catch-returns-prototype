@@ -13,7 +13,6 @@
         Details of a fish you caught
       </h1>
       <form action="summary.html">
-
         {{ govukInput({
           label: {
             text: "Name of river",
@@ -25,30 +24,6 @@
           id: "river",
           name: "river",
           classes: "govuk-!-width-one-half"
-        }) }}
-
-        {{ govukRadios({
-          classes: "govuk-radios--inline",
-          idPrefix: "changed-name",
-          name: "changed-name",
-          fieldset: {
-            legend: {
-              text: "Type of catch",
-              isPageHeading: false,
-              classes: "govuk-!-font-weight-bold"
-            }
-          },
-
-          items: [
-            {
-              value: "salmon",
-              text: "Salmon"
-            },
-            {
-              value: "sea-trout",
-              text: "Sea trout"
-            }
-          ]
         }) }}
 
         {{ govukDateInput({
@@ -76,22 +51,20 @@
           name: "changed-name",
           fieldset: {
             legend: {
-              text: "Method",
+              text: "Type of catch",
+              isPageHeading: false,
               classes: "govuk-!-font-weight-bold"
             }
           },
+
           items: [
             {
-              value: "fly",
-              text: "Fly"
+              value: "salmon",
+              text: "Salmon"
             },
             {
-              value: "spinner",
-              text: "Spinner"
-            },
-            {
-              value: "bait",
-              text: "Bait"
+              value: "sea-trout",
+              text: "Sea trout"
             }
           ]
         }) }}
@@ -116,6 +89,54 @@
             {
               name: "Ounces",
               classes: "form-control-char-3"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "method",
+          name: "method",
+          fieldset: {
+            legend: {
+              text: "Method",
+              classes: "govuk-!-font-weight-bold"
+            }
+          },
+          items: [
+            {
+              value: "fly",
+              text: "Fly"
+            },
+            {
+              value: "spinner",
+              text: "Spinner"
+            },
+            {
+              value: "bait",
+              text: "Bait"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "releaesed",
+          name: "released",
+          fieldset: {
+            legend: {
+              text: "Released",
+              classes: "govuk-!-font-weight-bold"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
             }
           ]
         }) }}
