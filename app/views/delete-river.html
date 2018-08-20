@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Confirm deleting river Avon
+      </h1>
+      {{ govukInsetText({
+  text: "Deleting a river will also delete all the fish associated with it in your catch return."
+}) }}
+      <form action="summary-empty.html">
+        <button type="submit" class="govuk-button">
+          Delete river
+        </button>
+      </form>
+      <a class="govuk-body" href="summary">Cancel and return to summary page</a>
+    </div>
+</div>
+
+{% endblock %}
+
