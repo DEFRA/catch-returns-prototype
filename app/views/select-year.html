@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="summary-empty.html">
+        {{ govukRadios({
+            idPrefix: "select-year",
+            name: "select-year",
+            fieldset: {
+              legend: {
+                text: "What season are you reporting for?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "2018",
+                text: "2018"
+              },
+              {
+                value: "2019",
+                text: "2019"
+              }
+            ]
+          }) }}
+        
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+      </form>
+      
+    </div>
+</div>
+
+{% endblock %}
+
