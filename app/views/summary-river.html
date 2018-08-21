@@ -10,22 +10,26 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-l">
-        Submit your catch return
+        Your catch return report
       </h1>
-      <p class="govuk-body">Check the following return is accurate and complete and then submit. If you need to make changes click the 'Return to summary' link.</p>
-      <form action="confirm.html">
+      <form action="submit.html">
         <table class="govuk-table govuk-!-margin-bottom-9">
           <caption class="govuk-table__caption">Rivers fished</caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th class="govuk-table__header" scope="col">River</th>
               <th class="govuk-table__header govuk-table__header--numeric" scope="col">Days fished in total</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Actions</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th class="govuk-table__cell" scope="row">Trent</th>
+              <td class="govuk-table__cell" scope="row">Derwent (Cumbria)</td>
               <td class="govuk-table__cell govuk-table__header--numeric">11</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a href="add-river">Edit</a> | <a href="delete-river">Delete</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td colspan="3" class="govuk-table__cell govuk-table__cell--numeric defra-borderless"><a href="summary-js">Add river</a></td>
             </tr>
           </tbody>
         </table>
@@ -40,25 +44,22 @@
               <th class="govuk-table__header" scope="col">Weight</th>
               <th class="govuk-table__header" scope="col">Method</th>
               <th class="govuk-table__header" scope="col">Released</th>   
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Actions</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Trent</td>
-              <td class="govuk-table__cell">08/08</td>
-              <td class="govuk-table__cell">Salmon</td>
-              <td class="govuk-table__cell">10lb 2oz</td>
-              <td class="govuk-table__cell">Fly</td>
-              <td class="govuk-table__cell">No</td>
+              <td colspan="7" class="govuk-table__cell govuk-table__cell--numeric defra-borderless"><a href="add-fish">Add fish</a></td>
             </tr>
           </tbody>
         </table>
-
+        <p>If you expect to fish again this year please click the 'Exit and continue catch return later' link to return at a later date. You will then be able to update your return with further catches.</p>
+        <p>Otherwise, if you have finished fishing for the season, please click the 'Submit catch return' button to complete your catch return. Once submitted you will not be able to add or edit your return.</p>
         <button type="submit" class="govuk-button">
-          Submit
+          Review and submit catch return
         </button>
       </form>
-      <a class="govuk-body" href="summary">Return to summary</a>
+      <a class="govuk-body" href="index">Exit and continue catch return later</a>
     </div>
 </div>
 
