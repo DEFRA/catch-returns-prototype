@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="summary-empty.html">
+        <h1 class="govuk-heading-l">
+        Your licences
+      </h1>
+        <p>This return will cover the following licence(s), for the 2018 season.</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>00260719-2WS1JTU-32460F</li>
+          <li>00280118-1WS8JTU-22511D</li>
+          <li>00010120-7WS3JTU-32460F</li>
+        </ul>
+        <p>If any of this information is incorrect, call us on 03708 506 506 (open 8am to 6pm Monday to Friday) or <a href="mailto:enquiries@environment-agency.gov.uk">email us at enquiries@environment-agency.gov.uk</a>.</p>
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+      </form>
+      
+    </div>
+</div>
+
+{% endblock %}
+
