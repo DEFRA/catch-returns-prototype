@@ -6,3 +6,16 @@
 .defra-new-table-row {
   background-color: rgba(236, 244, 250, .6);
 }
+
+.secondary-button-as-link,
+.secondary-button-as-link:hover {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #005ea5;
+  text-decoration: underline;
+}
+
+.secondary-button-as-link:hover {
+  color: #2b8cc4;
+}
