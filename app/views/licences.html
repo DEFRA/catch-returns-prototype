@@ -12,7 +12,8 @@
       <h1 class="govuk-heading-l">
         Your licences
       </h1>
-      <form action="/summary-empty">
+      <!-- <form action="/summary-empty"> -->
+        <form action="/summary-empty" method="post">
         <p>This return will cover the following licence(s), for the 2018 season.</p>
 
         <div class="govuk-panel govuk-panel--confirmation">
@@ -23,8 +24,8 @@
           </div>
         </div>
         <p>If any of this information is incorrect, call us on 03708 506 506 (open 8am to 6pm Monday to Friday) or <a href="mailto:enquiries@environment-agency.gov.uk">email us at enquiries@environment-agency.gov.uk</a>.</p>
-        <button class="govuk-button" name="over-18" value="true">Continue</button>
-        <button class="govuk-button secondary-button-as-link" name="over-18" value="false">I did not fish this season</button>
+        <button class="govuk-button" name="did-fish" value="true">Continue</button>
+        <button class="govuk-button secondary-button-as-link" name="did-fish" value="false">I did not fish this season</button>
       </form>
       
     </div>

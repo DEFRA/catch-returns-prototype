@@ -8,9 +8,9 @@ router.post('/summary-empty', function (req, res) {
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  let over18 = req.session.data['over-18']
+  let fished = req.session.data['did-fish']
 
-  if (over18 === 'true') {
+  if (fished === 'true') {
     res.redirect('/summary-empty')
   } else {
     res.redirect('/confirm')
