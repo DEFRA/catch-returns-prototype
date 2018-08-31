@@ -10,7 +10,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        Details of a fish you caught
+        Add a fish
+      </h1>
+       <h1 class="govuk-heading-l">
+        Add details of your catch. You don't need to tell us the weight of small fish (1lb and under). 
       </h1>
       <form action="summary.html">
         {{ govukInput({
@@ -19,7 +22,7 @@
             classes: "govuk-!-font-weight-bold"
           },
           hint: {
-            text: "e.g. Derwent (Cumbria)"
+            text: "For example, Derwent (Cumbria)"
           },
           id: "river",
           name: "river",
@@ -79,15 +82,15 @@
             }
            },
           hint: {
-            text: "Only for salmon or sea trout weighing more than 1lb"
+            text: "Only add for salmon or sea trout weighing more than 1lb"
           },
           items: [
             {
-              name: "Pounds",
+              name: "lb",
               classes: "govuk-input--width-2"
             },
             {
-              name: "Ounces",
+              name: "oz",
               classes: "govuk-input--width-2"
             }
           ]
@@ -125,7 +128,7 @@
           name: "released",
           fieldset: {
             legend: {
-              text: "Released",
+              text: "Released?",
               classes: "govuk-!-font-weight-bold"
             }
           },
@@ -145,7 +148,7 @@
           Continue
         </button>
       </form>
-      <a class="govuk-body" href="summary-empty">Cancel and return to summary page</a>
+      <a class="govuk-body" href="summary-empty">Cancel and return to summary</a>
     </div>
 </div>
 
