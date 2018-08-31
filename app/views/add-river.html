@@ -10,7 +10,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        Details for the river where you fished
+        Add a river
+      </h1>
+       <h1 class="govuk-heading-l">
+        If you fished in more than one river, you can add another afterwards
       </h1>
       <form action="summary-river.html">
         {{ govukInput({
@@ -19,7 +22,7 @@
             classes: "govuk-!-font-weight-bold"
           },
           hint: {
-            text: "e.g. Derwent (Cumbria)"
+            text: "For example, Derwent (Cumbria)"
           },
           id: "river",
           name: "river",
@@ -28,7 +31,7 @@
 
         {{ govukInput({
           label: {
-            text: "How many days did you fish this river?",
+            text: "How many days fishing in this river?",
             classes: "govuk-!-font-weight-bold"
           },
           hint: {
@@ -42,7 +45,7 @@
           Continue
         </button>
       </form>
-      <a class="govuk-body" href="summary-empty">Cancel and return to summary page</a>
+      <a class="govuk-body" href="summary-empty">Cancel and return to catch return page</a>
     </div>
 </div>
 
