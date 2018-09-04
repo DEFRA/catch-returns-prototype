@@ -12,9 +12,8 @@
       <h1 class="govuk-heading-l">
         Add a fish
       </h1>
-       <h1 class="govuk-heading-l">
-        Add details of your catch. You don't need to tell us the weight of small fish (1lb and under). 
-      </h1>
+       <p class="govuk-body-l">
+        Add details of your catch. You don't need to tell us the weight of small fish (1lb and under)</p>
       <form action="summary.html">
         {{ govukInput({
           label: {
@@ -124,11 +123,11 @@
 
         {{ govukRadios({
           classes: "govuk-radios--inline",
-          idPrefix: "releaesed",
+          idPrefix: "released",
           name: "released",
           fieldset: {
             legend: {
-              text: "Released?",
+              text: "Released",
               classes: "govuk-!-font-weight-bold"
             }
           },
