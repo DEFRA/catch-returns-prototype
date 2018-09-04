@@ -9,20 +9,15 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">
-        Confirm deleting river Avon
-      </h1>
-      {{ govukInsetText({
-  text: "Deleting a river will also delete all the fish associated with it in your catch return."
-}) }}
+      <h1 class="govuk-heading-l">Confirm delete river Trent?</h1>
+      <p class="govuk-body">Deleting a river will also delete all the fish associated with it</p>
       <form action="summary-empty.html">
         <button type="submit" class="govuk-button">
-          Delete river
+          Delete
         </button>
       </form>
-      <a class="govuk-body" href="summary">Cancel and return to summary page</a>
+      <a class="govuk-body" href="summary">Cancel</a>
     </div>
 </div>
 
 {% endblock %}
-
